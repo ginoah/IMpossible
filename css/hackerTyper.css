@@ -12,6 +12,7 @@
     color:#00FF00;
     font-family:monospace;
     font-size:3vmin;
+    overflow:auto;
 
     animation: appear 2s 10s  ease-in-out forwards;
 }
