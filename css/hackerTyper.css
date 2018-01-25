@@ -1,10 +1,10 @@
 #console{
     position:absolute;
     opacity: 0;
-    width:70vw;
-    margin-left:10vw;
-    margin-top:10vh;
-    height:60vh;
+    width:40vw;
+    margin-left:25vw;
+    margin-top:30vmin;
+    height:50vh;
     background:#000000;
     padding-left:5vw;
     padding-right:5vw;

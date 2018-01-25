@@ -48,7 +48,7 @@
         margin-left:calc((100vw - 80vmin) / 2);
     }
     100%{
-        margin-top:calc(10vw);
+        margin-top:calc(10vmin);
         width:20vmin;
         margin-left:calc((100vw - 20vmin) / 2);
     }
