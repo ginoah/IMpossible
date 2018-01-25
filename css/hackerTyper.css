@@ -1,0 +1,26 @@
+#console{
+    position:absolute;
+    opacity: 0;
+    width:70vw;
+    margin-left:10vw;
+    margin-top:10vh;
+    height:60vh;
+    background:#000000;
+    padding-left:5vw;
+    padding-right:5vw;
+    padding-top:5vh;
+    color:#00FF00;
+    font-family:monospace;
+    font-size:3vmin;
+
+    animation: appear 2s 10s  ease-in-out forwards;
+}
+
+@keyframes appear{
+    0%{
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
