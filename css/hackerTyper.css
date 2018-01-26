@@ -1,6 +1,7 @@
 #console{
     position:absolute;
     opacity: 0;
+    visibility: hidden;
     width:40vw;
     margin-left:25vw;
     margin-top:30vmin;
@@ -14,14 +15,19 @@
     font-size:3vmin;
     overflow:auto;
 
-    animation: appear 2s 10s  ease-in-out forwards;
+    animation: console-appear 2s 10s  ease-in-out forwards;
 }
 
-@keyframes appear{
+@keyframes console-appear{
     0%{
 
     }
+    50%{
+        visibility: visible;
+        opacity: 0.5;
+    }
     100%{
+        visibility: visible;
         opacity: 1;
     }
 }

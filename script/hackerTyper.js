@@ -16,6 +16,7 @@ $(
 var Typer={
     text: null,
     accessCountimer:null,
+    autoAddText:null,
     index:0, // current cursor position
     speed:2, // speed of the Typer
     file:"", //file, must be setted
@@ -83,7 +84,7 @@ var Typer={
                         Typer.index-=Typer.speed;// remove speed for deleting text
                 }
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
-                window.scrollBy(0,50); // scroll to make sure bottom is always visible
+                $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else{
                 $('#console').css("text-align","center");
                 var backup = "WELCOME TO NTU IM !!!";
@@ -100,19 +101,26 @@ var Typer={
         }
     },
 
-    addText:function(){
+    autoAddText:function(interval){
         { // otherway if text is loaded
+            
             var cont=Typer.content(); // get the console content
             
             if(Typer.index <= Typer.text.length){
+
+                if(interval >= 100)
+                interval -= 50;
+                setTimeout(function(){Typer.autoAddText(interval);},interval);
+
+
                 if(cont.substring(cont.length-1,cont.length)=="|") // if the last char is the blinking cursor
                     $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it before adding the text
                 
                 Typer.index+=Typer.speed;   // add to the index the speed
                 
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
-                window.scrollBy(0,50); // scroll to make sure bottom is always visible
-            }else{
+                $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
+            }else if(interval == 500){
                 clearInterval(accessCountimer);
                 $('#console').css("text-align","center");
                 var backup = "WELCOME TO NTU IM !!!";
@@ -141,6 +149,42 @@ int main(){\n\
     cout << \"WELCOME TO NTU IM!!!\";\n\
     return 0;\n\
 }\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+frank\n\
+buttom\n\
 \
 \
 "
