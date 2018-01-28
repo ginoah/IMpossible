@@ -4,7 +4,7 @@
     visibility: hidden;
     width:40vw;
     margin-left:25vw;
-    margin-top:30vmin;
+    margin-top:32vmin;
     height:50vh;
     background:#000000;
     padding-left:5vw;
@@ -15,19 +15,36 @@
     font-size:3vmin;
     overflow:auto;
 
-    animation: console-appear 2s 10s  ease-in-out forwards;
+    animation: console-appear 2s 10s  ease-in-out both;
 }
 
 @keyframes console-appear{
     0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    50%{
+        visibility: visible;
+        opacity: 0.2;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
 
+@keyframes console-disappear{
+    0%{
+        visibility: visible;
+        opacity: 1;
     }
     50%{
         visibility: visible;
         opacity: 0.5;
     }
     100%{
-        visibility: visible;
-        opacity: 1;
+        visibility: hidden;
+        opacity: 0
+        ;
     }
 }

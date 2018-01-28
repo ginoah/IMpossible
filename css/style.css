@@ -1,12 +1,18 @@
 body{
     background-color:black;
-    /*background-image:url("../image/background.jpg");*/
     background-size: 100%;
-    background-repeat: no-repeat;
-    background-
 }
 
 
 html{
     padding:0;
+}
+
+@keyframes to-white{
+    0%{
+
+    }
+    100%{
+        background-color:#FFFFFF;
+    }
 }

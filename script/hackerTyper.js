@@ -78,7 +78,7 @@ var Typer={
                 if(cont.substring(cont.length-1,cont.length)=="|") // if the last char is the blinking cursor
                     $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it before adding the text
                 if(key.keyCode!=8){ // if key is not backspace
-                    Typer.index+=Typer.speed;   // add to the index the speed
+                    Typer.index+=(Typer.speed+2);   // add to the index the speed
                 }else{
                     if(Typer.index>0) // else if index is not less than 0 
                         Typer.index-=Typer.speed;// remove speed for deleting text
@@ -86,6 +86,14 @@ var Typer={
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else{
+                $('#symbol').css("animation","decline 15s 4s ease-in-out both");
+                $('#glow1').css("animation","appear 2s 8s ease-in both");
+                $('#glow2').css("animation","appear 2s 9.5s ease-in both");
+                $('#glow3').css("animation","appear 2s 11s ease-in both");
+                $('#glow4').css("animation","appear 2s 12.5s ease-in both");
+                $('body').css("animation","to-white 5s 10s ease-in both");
+                $('#console').css("animation","console-disappear 1.5s 3s linear both"); 
+                clearInterval(accessCountimer);
                 $('#console').css("text-align","center");
                 var backup = "WELCOME TO NTU IM !!!";
                 var garbledstr = backup;
@@ -121,6 +129,13 @@ var Typer={
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else if(interval == 500){
+                $('#symbol').css("animation","decline 15s 4s ease-in-out both");
+                $('#glow1').css("animation","appear 2s 8s ease-in both");
+                $('#glow2').css("animation","appear 2s 9.5s ease-in both");
+                $('#glow3').css("animation","appear 2s 11s ease-in both");
+                $('#glow4').css("animation","appear 2s 12.5s ease-in both");
+                $('body').css("animation","to-white 5s 10s ease-in both");
+                $('#console').css("animation","console-disappear 1.5s 3s linear both");                
                 clearInterval(accessCountimer);
                 $('#console').css("text-align","center");
                 var backup = "WELCOME TO NTU IM !!!";
@@ -149,42 +164,6 @@ int main(){\n\
     cout << \"WELCOME TO NTU IM!!!\";\n\
     return 0;\n\
 }\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-frank\n\
-buttom\n\
 \
 \
 "

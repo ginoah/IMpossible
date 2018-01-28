@@ -33,17 +33,33 @@
     animation: appear 1.5s 6.5s  ease-in-out forwards;
 }
 
+#glow1{
+    opacity: 0;
+}
+
+#glow2{
+    opacity: 0;
+}
+
+#glow3{
+    opacity: 0;
+}
+
+#glow4{
+    opacity: 0;
+}
+
 @keyframes rise{
     0% {
         transform: translate(0,0vh);
     }
     33% {
-        margin-top:calc(50vh - 50vmin);
+        margin-top:calc(50vh - 40vmin);
         width:80vmin;
         margin-left:calc((100vw - 80vmin) / 2);
     }
     66%{
-        margin-top:calc(50vh - 50vmin);
+        margin-top:calc(50vh - 40vmin);
         width:80vmin;
         margin-left:calc((100vw - 80vmin) / 2);
     }
@@ -54,13 +70,53 @@
     }
 }
 
+@keyframes decline{
+    0% {
+        margin-top:calc(10vmin);
+        width:20vmin;
+        margin-left:calc((100vw - 20vmin) / 2);
+    }
+    20%{
+        margin-top:calc(50vh - 40vmin);
+        width:80vmin;
+        margin-left:calc((100vw - 80vmin) / 2);
+    }
+    80%{
+        margin-top:calc(50vh - 40vmin);
+        width:80vmin;
+        margin-left:calc((100vw - 80vmin) / 2);
+        opacity:1;
+    }
+    100%{
+        margin-top:calc(50vh - 40vmin);
+        width:80vmin;
+        margin-left:calc((100vw - 80vmin) / 2);
+        opacity:0;
+    }
+}
+
 
 @keyframes appear{
     0%{
-
+        opacity: 0;
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes disappear{
+    0%{
+        opacity: 1;
+        margin-top:calc(50vh - 40vmin);
+        width:80vmin;
+        margin-left:calc((100vw - 80vmin) / 2);
+    }
+    100%{
+        opacity: 0;
+        margin-top:calc(50vh - 40vmin);
+        width:80vmin;
+        margin-left:calc((100vw - 80vmin) / 2);
     }
 }
 
@@ -81,3 +137,4 @@
         transform: rotate(-720deg);
     }
 }
+
