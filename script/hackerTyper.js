@@ -22,6 +22,7 @@ var Typer={
     file:"", //file, must be setted
     accessCount:0, //times alt is pressed for Access Granted
     deniedCount:0, //times caps is pressed for Access Denied
+    pass:false,// if the user reach welcome to ntu im !!! 
     init: function(){// inizialize Hacker Typer
         accessCountimer=setInterval(function(){Typer.updLstChr();},500); // inizialize timer for blinking cursor
         
@@ -86,19 +87,29 @@ var Typer={
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else{
-                $('#symbol').css("animation","decline 15s 4s ease-in-out both");
-                $('#glow1').css("animation","appear 2s 8s ease-in both");
-                $('#glow2').css("animation","appear 2s 9.5s ease-in both");
-                $('#glow3').css("animation","appear 2s 11s ease-in both");
-                $('#glow4').css("animation","appear 2s 12.5s ease-in both");
-                $('body').css("animation","to-white 5s 10s ease-in both");
-                $('#console').css("animation","console-disappear 1.5s 3s linear both"); 
-                clearInterval(accessCountimer);
-                $('#console').css("text-align","center");
-                var backup = "WELCOME TO NTU IM !!!";
-                var garbledstr = backup;
-                garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
-                this.garbled(garbledstr,backup);
+                if(!pass){
+                    pass = true;
+                    var backup = Typer.text.substring(0,Typer.index);
+                    var garbledstr = backup;
+                    garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
+                    this.garbled(garbledstr,backup);
+                    setTimeout(function(){Typer.autoAddText(500);},2000);
+                }
+                else{
+                    $('#symbol').css("animation","decline 15s 4s ease-in-out both");
+                    $('#glow1').css("animation","appear 2s 8s ease-in both");
+                    $('#glow2').css("animation","appear 2s 9.5s ease-in both");
+                    $('#glow3').css("animation","appear 2s 11s ease-in both");
+                    $('#glow4').css("animation","appear 2s 12.5s ease-in both");
+                    $('body').css("animation","to-white 5s 10s ease-in both");
+                    $('#console').css("animation","console-disappear 1.5s 3s linear both"); 
+                    clearInterval(accessCountimer);
+                    $('#console').css("text-align","center");
+                    var backup = "WELCOME TO NTU IM !!!";
+                    var garbledstr = backup;
+                    garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
+                    this.garbled(garbledstr,backup);
+                }
             }
         }
         if ( key.preventDefault && key.keyCode != 122 ) { // prevent F11(fullscreen) from being blocked
@@ -129,19 +140,29 @@ var Typer={
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else if(interval == 500){
-                $('#symbol').css("animation","decline 15s 4s ease-in-out both");
-                $('#glow1').css("animation","appear 2s 8s ease-in both");
-                $('#glow2').css("animation","appear 2s 9.5s ease-in both");
-                $('#glow3').css("animation","appear 2s 11s ease-in both");
-                $('#glow4').css("animation","appear 2s 12.5s ease-in both");
-                $('body').css("animation","to-white 5s 10s ease-in both");
-                $('#console').css("animation","console-disappear 1.5s 3s linear both");                
-                clearInterval(accessCountimer);
-                $('#console').css("text-align","center");
-                var backup = "WELCOME TO NTU IM !!!";
-                var garbledstr = backup;
-                garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
-                this.garbled(garbledstr,backup);
+                if(!pass){
+                    pass = true;
+                    var backup = Typer.text.substring(0,Typer.index);
+                    var garbledstr = backup;
+                    garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
+                    this.garbled(garbledstr,backup);
+                    setTimeout(function(){Typer.autoAddText(500);},2000);
+                }
+                else{
+                    $('#symbol').css("animation","decline 15s 4s ease-in-out both");
+                    $('#glow1').css("animation","appear 2s 8s ease-in both");
+                    $('#glow2').css("animation","appear 2s 9.5s ease-in both");
+                    $('#glow3').css("animation","appear 2s 11s ease-in both");
+                    $('#glow4').css("animation","appear 2s 12.5s ease-in both");
+                    $('body').css("animation","to-white 5s 10s ease-in both");
+                    $('#console').css("animation","console-disappear 1.5s 3s linear both");                
+                    clearInterval(accessCountimer);
+                    $('#console').css("text-align","center");
+                    var backup = "WELCOME TO NTU IM !!!";
+                    var garbledstr = backup;
+                    garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
+                    this.garbled(garbledstr,backup);
+                }
             }
         }
     },
