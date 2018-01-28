@@ -88,12 +88,12 @@ var Typer={
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else{
                 if(!Typer.pass){
-                    Typer.pass = true;
+                    
                     var backup = Typer.text.substring(0,Typer.index);
                     var garbledstr = backup;
                     garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
                     this.garbled(garbledstr,backup);
-                    setTimeout(function(){Typer.autoAddText(500);},3000);
+                    setTimeout(function(){Typer.pass = true;},3000);
                 }
                 else{
                     $('#symbol').css("animation","decline 15s 4s ease-in-out both");
@@ -141,12 +141,11 @@ var Typer={
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else if(interval == 500){
                 if(!Typer.pass){
-                    Typer.pass = true;
                     var backup = Typer.text.substring(0,Typer.index);
                     var garbledstr = backup;
                     garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
                     this.garbled(garbledstr,backup);
-                    setTimeout(function(){Typer.autoAddText(500);},3000);
+                    setTimeout(function(){Typer.pass = true;},3000);
                 }
                 else{
                     $('#symbol').css("animation","decline 15s 4s ease-in-out both");
