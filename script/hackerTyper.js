@@ -109,6 +109,9 @@ var Typer={
                     var garbledstr = backup;
                     garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
                     this.garbled(garbledstr,backup);
+                    $(document).unbind('keydown');
+                    setTimeout(function(){$('#console').remove();$('#symbol').remove();},20000);
+                    
                 }
             }
         }
@@ -161,6 +164,8 @@ var Typer={
                     var garbledstr = backup;
                     garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
                     this.garbled(garbledstr,backup);
+                    $(document).unbind('keydown');
+                    setTimeout(function(){$('#console').remove();$('#symbol').remove();},20000);
                 }
             }
         }
