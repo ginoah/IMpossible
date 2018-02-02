@@ -169,7 +169,7 @@ var Typer={
         if(!Typer.garbleding)
             Typer.garbled(garbledstr,backup);
         $(document).unbind('keydown');
-        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map.html");},20000);
+        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map");},20000);
     },
     
     updLstChr:function(){ // blinking cursor
