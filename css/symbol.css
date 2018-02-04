@@ -138,3 +138,12 @@
     }
 }
 
+@keyframes to-white{
+    0%{
+
+    }
+    100%{
+        background-color:#FFFFFF;
+    }
+}
+

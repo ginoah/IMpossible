@@ -1,7 +1,28 @@
-/*
-*(c) Copyright 2011 Simone Masiero. Some Rights Reserved. 
-*This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License
-*/
+
+
+var skipHover = false;
+
+
+$(
+    function(){
+        $("#skip-button").hover(function() {
+            $('#nav-container').toggleClass("pushed");
+            $('#skip-button-text').html("Sure?");
+            setTimeout(function(){skipHover = true},100);
+        });
+        $("#skip-button").mouseleave(function() {
+            $('#skip-button-text').html("Skip");
+        });
+        $("#skip-button").click(function() {
+            if(skipHover){
+                $("#skip-button").remove();
+                Typer.end();
+            }
+        });
+    }
+);
+
+
 
 $(
     function(){
@@ -174,7 +195,7 @@ var Typer={
         if(!Typer.garbleding)
             Typer.garbled(garbledstr,backup);
         $(document).unbind('keydown');
-        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map/index.html");},20000);
+        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map.html");},20000);
     },
     updLstChr:function(){ // blinking cursor
         var cont=this.content(); // get console 
