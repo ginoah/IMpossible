@@ -26,19 +26,24 @@
             Typer.speed=1;
             Typer.init();
 
+            var skipHover = false;
+
 
             $(
                 function(){
                     $("#skip-button").hover(function() {
                         $('#nav-container').toggleClass("pushed");
                         $('#skip-button-text').html("Sure?");
+                        setTimeout(function(){skipHover = true},100);
                     });
                     $("#skip-button").mouseleave(function() {
                         $('#skip-button-text').html("Skip");
                     });
                     $("#skip-button").click(function() {
-                        $("#skip-button").remove();
-                        Typer.end();
+                        if(skipHover){
+                            $("#skip-button").remove();
+                            Typer.end();
+                        }
                     });
                 }
             );

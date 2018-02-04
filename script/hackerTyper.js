@@ -5,6 +5,8 @@
 
 $(
     function(){
+        var audio = new Audio('audio/gear.m4a');
+        audio.play();
         $( document ).keydown(
             function ( event ) { 
                 if(!Typer.garbleding)
@@ -25,6 +27,7 @@ var Typer={
     deniedCount:0, //times caps is pressed for Access Denied
     pass:false,// if the user reach welcome to ntu im !!! 
     garbleding:false,
+    lst:"|",
     init: function(){// inizialize Hacker Typer
         accessCountimer=setInterval(function(){Typer.updLstChr();},500); // inizialize timer for blinking cursor
         
@@ -72,7 +75,7 @@ var Typer={
     },
     
     addText:function(key){//Main function to add the code
-
+        Typer.typeWriterAudio();
         if(key.keyCode == 192){
             var backup = Typer.text.substring(0,Typer.index);
             var garbledstr = backup;
@@ -83,10 +86,10 @@ var Typer={
             var cont=Typer.content(); // get the console content
             
             if(Typer.index <= Typer.text.length){
-                if(cont.substring(cont.length-1,cont.length)=="|") // if the last char is the blinking cursor
+                if(cont.substring(cont.length-1,cont.length)==Typer.lst) // if the last char is the blinking cursor
                     $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it before adding the text
                 if(key.keyCode!=8){ // if key is not backspace
-                    Typer.index+=(Typer.speed+4);   // add to the index the speed
+                    Typer.index+=(Typer.speed+2);   // add to the index the speed
                 }else{
                     if(Typer.index>0) // else if index is not less than 0 
                         Typer.index-=Typer.speed;// remove speed for deleting text
@@ -129,12 +132,13 @@ var Typer={
                 setTimeout(function(){Typer.autoAddText(interval);},interval);
 
 
-                if(cont.substring(cont.length-1,cont.length)=="|") // if the last char is the blinking cursor
+                if(cont.substring(cont.length-1,cont.length)==Typer.lst) // if the last char is the blinking cursor
                     $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it before adding the text
                 
                 Typer.index+=Typer.speed;   // add to the index the speed
                 
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
+                Typer.typeWriterAudio();
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
             }else if(interval == 500){
                 if(!Typer.pass){
@@ -154,6 +158,7 @@ var Typer={
     },
 
     end:function(){
+        setTimeout(function(){var audio = new Audio('audio/show.m4a');audio.play();},11000);
         $('#symbol').css("animation","decline 15s 4s ease-in-out both");
         $('#glow1').css("animation","appear 2s 8s ease-in both");
         $('#glow2').css("animation","appear 2s 9.5s ease-in both");
@@ -169,16 +174,19 @@ var Typer={
         if(!Typer.garbleding)
             Typer.garbled(garbledstr,backup);
         $(document).unbind('keydown');
-        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map");},20000);
+        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map/index.html");},20000);
     },
-    
     updLstChr:function(){ // blinking cursor
         var cont=this.content(); // get console 
-        if(cont.substring(cont.length-1,cont.length)=="|") // if last char is the cursor
+        if(cont.substring(cont.length-1,cont.length)==Typer.lst) // if last char is the cursor
             $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it
         else
-            this.write("|"); // else write it
-    }
+            this.write(Typer.lst); // else write it
+    },
+    typeWriterAudio:function(){ // blinking cursor
+        var audio = new Audio('audio/typeWriter.m4a');
+        audio.play();
+    },
 }
 
 

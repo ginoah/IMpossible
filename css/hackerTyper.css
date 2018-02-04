@@ -13,7 +13,7 @@
     color:#00FF00;
     font-family:monospace;
     font-size:3vmin;
-    overflow:auto;
+    overflow:visible;
 
     animation: console-appear 2s 10s  ease-in-out both;
 }

@@ -86,8 +86,6 @@
     -o-transform: rotate(-137deg) translateY(-1.5em);
     transform: rotate(-137deg) translateY(-1.5em);
 
-    border-right-color: #e9b8b9;
-    box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
 }
 
 .pushed .bar:nth-of-type(3) {
@@ -98,8 +96,6 @@
     -o-transform: rotate(-42deg);
     transform: rotate(-42deg);
 
-    border-right-color: #ddf1da;
-    box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
 }
 
 /*

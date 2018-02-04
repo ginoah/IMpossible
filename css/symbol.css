@@ -21,7 +21,7 @@
 }
 
 #symbol3{
-    animation: rotate-anticlockwise 6s 1 ease-in-out forwards;
+    animation: rotate-clockwise 6s 1 ease-in-out forwards;
 }
 
 #symbol4{
@@ -30,7 +30,7 @@
 
 #symbol5{
     opacity: 0;
-    animation: appear 1.5s 6.5s  ease-in-out forwards;
+    animation: appear 1.5s 6s  ease-in-out forwards;
 }
 
 #glow1{
