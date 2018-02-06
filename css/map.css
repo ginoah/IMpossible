@@ -1,4 +1,41 @@
 #bkground{
     position: absolute;
-    width:100vw;
+    width:300vw;
+    z-index: -100;
+}
+
+.btn{
+    z-index: 1;
+    position:fixed;
+    border: solid white;
+    border-radius: 10%;
+    color:white;
+    cursor: pointer;
+}
+
+
+a{
+    position:absolute;
+}
+
+#a-0{
+    left:100vw;
+    top:120vw;
+}
+
+#a-1{
+    top:120vw;
+}
+
+#a-2{
+    left:100vw;
+}
+
+#btn-1{
+    top:50vh;
+}
+
+#btn-2{
+    
+    left:50vw;
 }
