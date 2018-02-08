@@ -23,7 +23,7 @@ $(".btn").click(function(){
         $(".btn").fadeOut(1000);
     }
     else{
-        setTimeout(function(){$(".btn").fadeIn(1000);},3000);
+        setTimeout(function(){$(".btn").fadeIn(1000);$("#btn-0").fadeOut(0);},3000);
         $("#btn-0").fadeOut(1000);
     }
 });

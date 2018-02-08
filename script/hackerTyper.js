@@ -106,8 +106,11 @@ var Typer={
             var backup = Typer.text.substring(0,Typer.index);
             var garbledstr = backup;
             garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
-            if(!Typer.garbleding)
+            if(!Typer.garbleding){
                 Typer.garbled(garbledstr,backup);
+                var audio = new Audio('audio/noise.m4a');
+                audio.play();
+            }
         }else if(Typer.text){ // otherway if text is loaded
             var cont=Typer.content(); // get the console content
             
@@ -128,8 +131,11 @@ var Typer={
                     var backup = Typer.text.substring(0,Typer.index);
                     var garbledstr = backup;
                     garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
-                    if(!Typer.garbleding)
+                    if(!Typer.garbleding){
                         Typer.garbled(garbledstr,backup);
+                        var audio = new Audio('audio/noise.m4a');
+                        audio.play();
+                    }
                     setTimeout(function(){Typer.pass = true;},3000);
                 }
                 else{
@@ -171,8 +177,11 @@ var Typer={
                     var backup = Typer.text.substring(0,Typer.index);
                     var garbledstr = backup;
                     garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
-                    if(!Typer.garbleding)
+                    if(!Typer.garbleding){
                         Typer.garbled(garbledstr,backup);
+                        var audio = new Audio('audio/noise.m4a');
+                        audio.play();
+                    }
                     setTimeout(function(){Typer.pass = true;},3000);
                 }
                 else{
@@ -201,8 +210,9 @@ var Typer={
         var backup = "WELCOME TO NTU IM !!!";
         var garbledstr = backup;
         garbledstr = garbledstr.replace(/[^\n\s\t\.]/g, "@");//replace all chacracter witch is not space,tab,newline to '@'
-        if(!Typer.garbleding)
+        if(!Typer.garbleding){
             Typer.garbled(garbledstr,backup);
+        }
         $(document).unbind('keydown');
         setTimeout(function(){$('#symbol').remove();window.location.assign("./map.html");},20000);
     },
