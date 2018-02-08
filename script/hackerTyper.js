@@ -34,8 +34,13 @@ $(
                     Typer.addText( event ); //Capture the keydown event and call the addText, this is executed on page load
             }
         );
+        $("#console").on("click",function(){Typer.autoAddText(500);});
+        Typer.speed=1;
+        Typer.init();
+        setTimeout(function(){$("#console").fadeIn(2000);},10000);
     }
 );
+
 
 var Typer={
     text: null,
@@ -181,12 +186,16 @@ var Typer={
     end:function(){
         setTimeout(function(){var audio = new Audio('audio/show.m4a');audio.play();},11000);
         $('#symbol').css("animation","decline 15s 4s ease-in-out both");
-        $('#glow1').css("animation","appear 2s 8s ease-in both");
-        $('#glow2').css("animation","appear 2s 9.5s ease-in both");
-        $('#glow3').css("animation","appear 2s 11s ease-in both");
-        $('#glow4').css("animation","appear 2s 12.5s ease-in both");
+        setTimeout(function(){$("#glow1").fadeIn(2000)},8000);
+        setTimeout(function(){$("#glow2").fadeIn(2000)},9500);
+        setTimeout(function(){$("#glow3").fadeIn(2000)},11000);
+        setTimeout(function(){$("#glow4").fadeIn(2000)},12500);
         $('body').css("animation","to-white 5s 10s ease-in both");
-        $('#console').css("animation","console-disappear 1.5s 3s linear both"); 
+        // $('#console').css("animation","console-disappear 1.5s 3s linear both"); 
+        $("#console").css("display","initial");
+        $("#console").off();
+        setTimeout(function(){$("#console").fadeOut(1500);},3000);
+        setTimeout(function(){$('#console').remove();},4500);
         clearInterval(accessCountimer);
         $('#console').css("text-align","center");
         var backup = "WELCOME TO NTU IM !!!";
@@ -195,7 +204,7 @@ var Typer={
         if(!Typer.garbleding)
             Typer.garbled(garbledstr,backup);
         $(document).unbind('keydown');
-        setTimeout(function(){$('#console').remove();$('#symbol').remove();window.location.assign("./map.html");},20000);
+        setTimeout(function(){$('#symbol').remove();window.location.assign("./map.html");},20000);
     },
     updLstChr:function(){ // blinking cursor
         var cont=this.content(); // get console 

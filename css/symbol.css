@@ -11,6 +11,10 @@
     
 }
 
+.glow{
+    display: none;
+}
+
 #symbol1{
     opacity: 0;
     animation: appear 1.5s 6.5s  ease-in-out forwards;
@@ -33,21 +37,6 @@
     animation: appear 1.5s 6s  ease-in-out forwards;
 }
 
-#glow1{
-    opacity: 0;
-}
-
-#glow2{
-    opacity: 0;
-}
-
-#glow3{
-    opacity: 0;
-}
-
-#glow4{
-    opacity: 0;
-}
 
 @keyframes rise{
     0% {
