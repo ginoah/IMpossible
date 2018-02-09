@@ -4,12 +4,12 @@
     z-index: -100;
 }
 
-#white-mask{
+#black-mask{
     position:absolute;
     width:300vw;
     height:200vw;
     z-index:100;
-    background: white;
+    background: black;
 }
 
 

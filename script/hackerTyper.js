@@ -195,6 +195,7 @@ var Typer={
     end:function(){
         setTimeout(function(){var audio = new Audio('audio/show.m4a');audio.play();},11000);
         $('#symbol').css("animation","decline 15s 4s ease-in-out both");
+        setTimeout(function(){$(".cd-transition-layer .bg-layer ").css("animation","cd-sequence 1.5s steps(24) both")},20000);
         setTimeout(function(){$("#glow1").fadeIn(2000)},8000);
         setTimeout(function(){$("#glow2").fadeIn(2000)},9500);
         setTimeout(function(){$("#glow3").fadeIn(2000)},11000);
@@ -214,7 +215,7 @@ var Typer={
             Typer.garbled(garbledstr,backup);
         }
         $(document).unbind('keydown');
-        setTimeout(function(){$('#symbol').remove();window.location.assign("./map.html");},20000);
+        setTimeout(function(){$('#symbol').remove();window.location.assign("./map.html");},23000);
     },
     updLstChr:function(){ // blinking cursor
         var cont=this.content(); // get console 

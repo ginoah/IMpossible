@@ -1,0 +1,34 @@
+.cd-transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  visibility: hidden;
+  overflow: hidden;
+}
+.cd-transition-layer .bg-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-2%);
+  height: 100%;
+  width: 2500%;
+  background: url("../image/ink.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+@keyframes cd-sequence {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(-98%);
+  }
+}

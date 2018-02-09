@@ -5,12 +5,15 @@ $(
             scrollTop: $("#a-0").offset().top,
             scrollLeft: $("#a-0").offset().left
         }, 1, 'easeInOutExpo');
-        $("#white-mask").fadeOut(2000);
+        $("#black-mask").fadeOut(2000);
     }
 )
 
 
 $(".btn").click(function(){
+    var audio = new Audio('audio/click.m4a');
+    audio.play();
+
     var id = $(this).attr("id");
     var idNum = id[id.length-1];
     $('html, body').animate({
