@@ -30,3 +30,18 @@ $(".btn").click(function(){
         $("#btn-0").fadeOut(1000);
     }
 });
+
+
+$("#btn-0").click(function(){
+    var audio = new Audio('audio/click.m4a');
+    audio.play();
+
+    var id = $(this).attr("id");
+    var idNum = id[id.length-1];
+    $('html, body').animate({
+        scrollTop: $("#a-"+idNum).offset().top,
+        scrollLeft: $("#a-"+idNum).offset().left
+    }, 3000, 'easeInOutExpo');
+    $(this).fadeOut(1000);
+    setTimeout(function(){$(".btn").fadeIn(1000);$("#btn-0").fadeOut(0);},3000);
+});
