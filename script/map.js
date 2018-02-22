@@ -5,7 +5,7 @@ $(
             scrollTop: $("#a-0").offset().top,
             scrollLeft: $("#a-0").offset().left
         }, 1, 'easeInOutExpo');
-        $("#black-mask").fadeOut(2000);
+        // $("#black-mask").fadeOut(3000);
     }
 )
 

@@ -2,12 +2,28 @@
     position: absolute;
     width:300vw;
     z-index: -100;
+    -webkit-mask-image: url(../image/ink.png);
+    -webkit-mask-position:0% -1%;
+    -webkit-mask-size:833% 33%;
+    -webkit-mask-repeat:repeat-y;
+    animation: mask 2s steps(24) both;
+}
+@keyframes mask{
+    0% {
+    -webkit-mask-position:0% -1%;
+    }
+    99% {
+    -webkit-mask-position:109.1% -1%;
+    }
+    100%{
+    -webkit-mask-image:none;
+    }
 }
 
 #black-mask{
     position:absolute;
-    width:300vw;
-    height:200vw;
+    width:100vw;
+    height:100vh;
     z-index:100;
     background: black;
 }
@@ -27,17 +43,18 @@
 }
 
 #a-2{
-    left:10vw;
+    top:5vw;
+    left:200vw;
 }
 
 #a-3{
     left:200vw;
-    top:100vw;
+    top:65vw;
 }
 
 #a-4{
     left:100vw;
-    top:120vw;
+    top:130vw;
 }
 
 #btn-0{

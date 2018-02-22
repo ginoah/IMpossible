@@ -1,6 +1,7 @@
 
 
 var skipHover = false;
+var skipAll = false;
 
 
 $(
@@ -15,7 +16,9 @@ $(
         });
         $("#skip-button").click(function() {
             if(skipHover){
-                $("#skip-button").remove();
+                if(skipAll)
+                    window.location.assign("./map.html");
+                skipAll=true;
                 Typer.end();
             }
         });
@@ -139,7 +142,7 @@ var Typer={
                     setTimeout(function(){Typer.pass = true;},3000);
                 }
                 else{
-                    $("#skip-button").remove();
+                    skipAll=true;
                     Typer.end();
                 }
             }
