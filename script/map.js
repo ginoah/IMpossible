@@ -50,6 +50,7 @@ $(".btn").click(function(){
             ||lastClass=="leftup"||lastClass=="leftdown"||lastClass=="rightup"||lastClass=="rightdown")
             setTimeout(function(){$("#btn-home").removeClass(lastClass);},wait);
     }
+    $('html body').scrollTop(100);
 });
 
 // $(".homebtn").click(function(){
