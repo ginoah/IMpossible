@@ -38,7 +38,6 @@ $(
             }
         );
         $("#console").on("click",function(){Typer.autoAddText(500);});
-        Typer.speed=1;
         Typer.init();
         setTimeout(function(){$("#console").fadeIn(2000);},10000);
     }
@@ -121,10 +120,10 @@ var Typer={
                 if(cont.substring(cont.length-1,cont.length)==Typer.lst) // if the last char is the blinking cursor
                     $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it before adding the text
                 if(key.keyCode!=8){ // if key is not backspace
-                    Typer.index+=(Typer.speed+2);   // add to the index the speed
+                    Typer.index+=3;   // add to the index the speed
                 }else{
                     if(Typer.index>0) // else if index is not less than 0 
-                        Typer.index-=Typer.speed;// remove speed for deleting text
+                        Typer.index-=3;// remove speed for deleting text
                 }
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
                 $('#console').scrollTop(1000); // scroll to make sure bottom is always visible
@@ -139,9 +138,9 @@ var Typer={
                         var audio = new Audio('audio/noise.m4a');
                         audio.play();
                     }
-                    setTimeout(function(){Typer.pass = true;},3000);
+                    setTimeout(function(){Typer.pass = true;},1500);
                 }
-                else{
+                else if(!Typer.garbleding){
                     skipAll=true;
                     Typer.end();
                 }
@@ -162,7 +161,7 @@ var Typer={
             
             if(Typer.index <= Typer.text.length){
 
-                if(interval >= 100)
+                if(interval >= 150)
                 interval -= 50;
                 setTimeout(function(){Typer.autoAddText(interval);},interval);
 
@@ -170,7 +169,7 @@ var Typer={
                 if(cont.substring(cont.length-1,cont.length)==Typer.lst) // if the last char is the blinking cursor
                     $("#console").html($("#console").html().substring(0,cont.length-1)); // remove it before adding the text
                 
-                Typer.index+=Typer.speed;   // add to the index the speed
+                Typer.index+=2;   // add to the index the speed
                 
                 Typer.rewrite(Typer.text.substring(0,Typer.index));
                 Typer.typeWriterAudio();
@@ -185,10 +184,10 @@ var Typer={
                         var audio = new Audio('audio/noise.m4a');
                         audio.play();
                     }
-                    setTimeout(function(){Typer.pass = true;},3000);
+                    setTimeout(function(){Typer.pass = true;},1500);
                 }
-                else{
-                    $("#skip-button").remove();
+                else if(!Typer.garbleding){
+                    skipAll=true;
                     Typer.end();
                 }
             }
@@ -204,6 +203,7 @@ var Typer={
         setTimeout(function(){$("#glow3").fadeIn(2000)},11000);
         setTimeout(function(){$("#glow4").fadeIn(2000)},12500);
         $('body').css("animation","to-white 5s 10s ease-in both");
+        setTimeout(function(){$("#skip-button").fadeOut(2000)},14000);
         // $('#console').css("animation","console-disappear 1.5s 3s linear both"); 
         $("#console").css("display","initial");
         $("#console").off();
