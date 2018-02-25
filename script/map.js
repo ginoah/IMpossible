@@ -1,10 +1,10 @@
 
 $(
     function(){
-        $('#map').animate({
-            scrollTop : document.getElementById("map").scrollTop + $("#home").offset().top,
-            scrollLeft : document.getElementById("map").scrollLeft + $("#home").offset().left
-        }, 1, 'easeInOutExpo');
+        
+        $("#map").scrollTop(document.getElementById("map").scrollTop + $("#home").offset().top);
+        $("#map").scrollLeft(document.getElementById("map").scrollLeft + $("#home").offset().left);
+        $('html body').scrollTop(100);
     }
 )
 
