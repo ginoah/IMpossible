@@ -1,3 +1,14 @@
+
+#map{
+    position:relative;
+    margin-top:1vw;
+    margin-left:2.5vw;
+    width: 95vw;
+    height: 55vw;
+    overflow: auto;
+    padding: 0px;}
+
+
 #bkground{
     position: absolute;
     width:300vw;
@@ -5,8 +16,8 @@
     -webkit-mask-image: url(../image/ink.png);
     -webkit-mask-position:0% -1%;
     -webkit-mask-size:833% 33%;
-    -webkit-mask-repeat:repeat-y;
     animation: mask 2s steps(24) both;
+    float:left;
 }
 @keyframes mask{
     0% {
@@ -20,75 +31,134 @@
     }
 }
 
-#black-mask{
-    position:absolute;
-    width:100vw;
-    height:100vh;
-    z-index:100;
-    background: black;
-}
-
 
 .anchor{
     position:absolute;
+    z-index: 100;
+    color:white;]
 }
 
-#a-0{
+#home{
     left:100vw;
     top:65vw;
 }
 
-#a-1{
-    top:120vw;
+#information-1{
+    top:130vw;
 }
 
-#a-2{
+#information-2{
+    top:65vw;
+}
+
+#information-3{
+    top:0vw;
+}
+
+#information-4{
+    left:100vw;
+}
+
+#photos{
     top:5vw;
     left:200vw;
 }
 
-#a-3{
+#register-1{
     left:200vw;
     top:65vw;
 }
+#register-2{
+    left:200vw;
+    top:138vw;
+}
 
-#a-4{
+#about{
     left:100vw;
     top:130vw;
 }
 
-#btn-0{
-    top:85vh;
-    left:42vw;
+
+
+
+
+#btn-home{
     display: none;
     animation: float 6s -0s ease-in-out infinite;
 }
 
-#btn-1{
-    top:calc(50vh - 2vw);
+#btn-information-1{
     animation: float 6s -1s ease-in-out infinite;
 }
 
-#btn-2{
-    top:2vh;
-    left:42vw;
+#btn-information-2{
+    display:none;
+    animation: float 6s -1s ease-in-out infinite;
+}
+
+#btn-information-3{
+    display:none;
+    animation: float 6s -1s ease-in-out infinite;
+}
+
+#btn-information-4{
+    display:none;
+    animation: float 6s -1s ease-in-out infinite;
+}
+
+#btn-photos{
     animation: float 6s -2s ease-in-out infinite;
 }
 
-#btn-3{
-    top:calc(50vh - 2vw);
-    left:84vw;
+#btn-register-1{
     animation: float 6s -3s ease-in-out infinite;
 }
 
-#btn-4{
-    top:85vh;
-    left:42vw;
+#btn-register-2{
+    display: none;
+    animation: float 6s -3s ease-in-out infinite;
+}
+
+#btn-about{
     animation: float 6s -4s ease-in-out infinite;
 }
 
 
 
+.up{
+    top:2vw;
+    left:42vw;
+}
+.down{
+    top:50vw;
+    left:42vw;
+}
+.left{
+    top:25vw;
+    left:3vw;
+}
+.right{
+    top:25vw;
+    left:82vw;
+}
+
+.rightup{
+    top:2vw;
+    left:82vw;
+}
+
+.rightdown{
+    top:50vw;
+    left:82;
+}
+.leftup{
+    top:2vw;
+    left:3vw;
+}
+.leftdown{
+    top:50vw;
+    left:3vw;
+}
 
 /*.container {
     width: 100%;
@@ -109,12 +179,9 @@
 
     filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.6));
     transform: translatey(0px);
-    
-
-    
 }
 
-.btn-back {
+/*.btn-back {
     position:fixed;
     
     width: 16vw;
@@ -124,10 +191,7 @@
 
     filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.6));
     transform: translatey(0px);
-    
-
-    
-}
+}*/
 
 
 @keyframes float {
