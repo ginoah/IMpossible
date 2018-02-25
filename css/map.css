@@ -57,9 +57,27 @@
     box-sizing: border-box;
 }
 
+
 .listbtn:hover{
     filter: drop-shadow(0.5vw 0.5vw 0.2vw white);
 }
+
+#listbtn-information-1{
+    animation: float-no-shadow 5s -1s ease-in-out infinite;
+}
+
+#listbtn-photos{
+    animation: float-no-shadow 7s -2s ease-in-out infinite;
+}
+
+#listbtn-register-1{
+    animation: float-no-shadow 4.5s -3s ease-in-out infinite;
+}
+
+#listbtn-about{
+    animation: float-no-shadow 6s -4s ease-in-out infinite;
+}
+
 
 .icon{
     position:absolute;
@@ -266,6 +284,18 @@
     }
     100% {
         filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.6));
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float-no-shadow{
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-0.3vw);
+    }
+    100% {
         transform: translatey(0px);
     }
 }
