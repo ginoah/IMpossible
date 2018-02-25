@@ -5,7 +5,7 @@
     margin-left:2.5vw;
     width: 95vw;
     height: 55vw;
-    overflow: auto;
+    overflow: hidden;
     padding: 0px;}
 
 
@@ -31,11 +31,68 @@
     }
 }
 
+#manu{
+    position:fixed;
+    z-index: 150;
+    width:20vw;
+    height: 22vw;
+    top:2vw;
+    left:3vw;
+    background:url(../image/list_empty.png);
+    background-size: 100%;
+    animation: float 6s -5s ease-in-out infinite;
+}
+
+#list{
+    position:absolute;
+    margin-top:7vw;
+    height:12vw;
+    width:10vw;
+    left:5vw;
+    text-align: center;
+}
+
+.listbtn{
+    height:3vw;
+    box-sizing: border-box;
+}
+
+.listbtn:hover{
+    filter: drop-shadow(0.5vw 0.5vw 0.2vw white);
+}
+
+.icon{
+    position:absolute;
+    left:0vw;
+    width:3vw;
+    height: 3vw;
+    text-align: center;
+}
+
+.iconimg{
+    height:100%;
+}
+
+.icontext{
+    position: absolute;
+    box-sizing: border-box;
+    left:3vw;
+    width: 7vw;
+    height: 3vw;
+    padding-top:1vw;
+    text-align: center;
+    
+}
+
+.icontextimg{
+    height: 1vw;
+}
 
 .anchor{
     position:absolute;
     z-index: 100;
-    color:white;]
+    color:white;
+    visibility: hidden;
 }
 
 #home{
@@ -88,6 +145,8 @@
 }
 
 #btn-information-1{
+    top:45vw;
+    left:10vw;
     animation: float 6s -1s ease-in-out infinite;
 }
 
@@ -107,6 +166,8 @@
 }
 
 #btn-photos{
+    top:5vw;
+    left:75vw;
     animation: float 6s -2s ease-in-out infinite;
 }
 
@@ -149,7 +210,7 @@
 
 .rightdown{
     top:50vw;
-    left:82;
+    left:82vw;
 }
 .leftup{
     top:2vw;
