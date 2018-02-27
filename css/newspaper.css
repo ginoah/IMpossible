@@ -1,0 +1,15 @@
+#newspaper-container{
+    position:relative;
+    left:120vw;
+    top:78vw;
+    width:60vw;
+    height:50vw;
+    overflow:auto;
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%,rgba(0, 0, 0, 1) 90%,rgba(0, 0, 0, 0) 100% );
+
+}
+
+#newspaper{
+    width: 100%;
+    background:green;
+}
