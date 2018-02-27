@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMpossible</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/photos.css">
+    <link rel="stylesheet" href="css/newspaper.css">
+
+    <script src='script/jquery.min.js' type='text/javascript'></script> 
+    <script src='script/jquery-ui.min.js' type='text/javascript'></script> 
+    <script src='script/map.js' type='text/javascript'></script>
+    <script src='script/photos.js' type='text/javascript'></script>
+
+</head>
+<body>
+    <div id="divLoading">
+    
+    </div>
+
+    
+        <div id="map">
+
+
+            <img src="image/main_right3.1.jpg" alt="this is background" id = "bkground">
+            <!-- <div id="black-mask"></div> -->
+
+            
+            <div id="manu">
+                <div id="list">
+                    <div class = "listbtn" id="listbtn-information-1" >
+                        <a>
+                            <div class="icon">                            
+                                <img src="image/castle_icon.png" alt="icon" class="iconimg">
+                            </div>
+                            <div class="icontext">
+                                <img src="image/information_text.png" alt="text" class="icontextimg">
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "listbtn" id="listbtn-photos">
+                        <a>
+                            <div class="icon">                            
+                                <img src="image/sun_icon.png" alt="icon" class="iconimg">
+                            </div>
+                            <div class="icontext">
+                                <img src="image/photos_text.png" alt="text" class="icontextimg">
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "listbtn" id="listbtn-register-1">
+                        <a>
+                            <div class="icon">                            
+                                <img src="image/lighthouse_icon.png" alt="icon" class="iconimg">
+                            </div>
+                            <div class="icontext">
+                                <img src="image/register_text.png" alt="text" class="icontextimg">
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "listbtn" id="listbtn-about">
+                        <a>
+                            <div class="icon">                            
+                                <img src="image/moon_icon.png" alt="icon" class="iconimg">
+                            </div>
+                            <div class="icontext">
+                                <img src="image/about_text.png" alt="text" class="icontextimg">
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "listbtn" id="listbtn-home">
+                        <a>
+                            <div class="icon">                            
+                                <img src="image/house_icon.png" alt="icon" class="iconimg">
+                            </div>
+                            <div class="icontext">
+                                <img src="image/home_text.png" alt="text" class="icontextimg">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="manu-shadow"></div>
+
+            <div class="btn down" id="btn-home">
+                <a>
+                    <img src="image/btn-home.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn homebtn informationbtn" id="btn-information-1">
+                <a>
+                    <img src="image/btn-information.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn informationbtn up" id="btn-information-2">
+                <a>
+                    <img src="image/btn-information.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn informationbtn up" id="btn-information-3">
+                <a>
+                    <img src="image/btn-information.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn informationbtn right" id="btn-information-4">
+                <a>
+                    <img src="image/btn-information.png" style="width:100%;"/>
+                </a>
+            </div>
+            
+            <div class="btn homebtn" id="btn-photos">
+                <a>
+                    <img src="image/btn-photos.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn homebtn right" id="btn-register-1">
+                <a>
+                    <img src="image/btn-register.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn down" id="btn-register-2">
+                <a>
+                    <img src="image/btn-register.png" style="width:100%;"/>
+                </a>
+            </div>
+
+            <div class="btn homebtn down" id="btn-about">
+                <a>
+                    <img src="image/btn-about.png" style="width:100%;"/>
+                </a>
+            </div>
+        
+        
+            <a class="anchor" id="home">home</a>
+
+            <div id="btn-mode"><img src="image/mode_icon.png" alt="mode" style="width: 100%;"></div>
+
+            <a class="anchor" id="information-1">information-1</a>
+            <a class="anchor" id="information-2">information-2</a>
+            <a class="anchor" id="information-3">information-3</a>
+            <a class="anchor" id="information-4">information-4</a>
+            <a class="anchor" id="photos">photos</a>
+
+            <div id="photos-container">
+                <div class="photos" id="photos-1"><figure><img src="image/photos/photos-1.jpg" alt="picture-1" class="picture" id="picture-1"></figure></div>
+                <div class="photos" id="photos-2"><figure><img src="image/photos/photos-2.jpg" alt="picture-2" class="picture" id="picture-2"></figure></div>
+                <div class="photos" id="photos-3"><figure><img src="image/photos/photos-3.jpg" alt="picture-3" class="picture" id="picture-3"></figure></div>
+                <div class="photos" id="photos-4"><figure><img src="image/photos/photos-4.jpg" alt="picture-4" class="picture" id="picture-4"></figure></div>
+                <div class="photos" id="photos-5"><figure><img src="image/photos/photos-5.jpg" alt="picture-5" class="picture" id="picture-5"></figure></div>
+            </div>
+
+            <a class="anchor" id="register-1">register-1</a>
+            <a class="anchor" id="register-2">register-2</a>
+            <a class="anchor" id="about">about</a>
+
+            <div id="newspaper-container">
+                <img id="newspaper" src="image/sample_aboutUs.jpg" alt="newspaper" >
+                    
+                </img>
+            </div>
+        </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDvj1zOX24GPUFEv9lSiykwjqU_XfvzueE",
+        authDomain: "impossible-3bcac.firebaseapp.com",
+        databaseURL: "https://impossible-3bcac.firebaseio.com",
+        projectId: "impossible-3bcac",
+        storageBucket: "",
+        messagingSenderId: "740380768268"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src='script/map.js' type='text/javascript'></script> 
+    <script>
+      function hide( ) {
+        $("#divLoading").fadeOut(1000);
+        // _oTag = document.getElementById("divLoading");
+        // _oTag.style.display = "none";  //隱藏動畫
+      }
+
+      if (window.attachEvent) {
+        window.attachEvent('onload', hide);
+      } else {
+        window.addEventListener('load', hide, false);
+      }
+    </script>
+</body>
+</html>    
