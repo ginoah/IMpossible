@@ -3,7 +3,15 @@ body{
 
 }
 
-
+#divLoading{
+    top:-5vw;
+    color:red;
+    position:absolute;
+    width:100vw;
+    height:120vh;
+    z-index:3000;
+    background-color: black;"
+}
 
 #map-container{
     position:relative;
@@ -22,7 +30,7 @@ body{
     height:100%;
     overflow: hidden;
     padding: 0px;
-    -webkit-mask-image: url(../image/fuckugino2.png);
+    -webkit-mask-image: url(../image/fuckugino3.png);
     -webkit-mask-size:100% 100%;
     /*-webkit-mask-position:-3.3vw -2vw;
     -webkit-mask-size:105% 105%;*/
@@ -47,7 +55,7 @@ body{
     -webkit-mask-image: url(../image/ink.png);
     -webkit-mask-position:0% -1%;
     -webkit-mask-size:833% 33%;
-    animation: mask 2s steps(24) both;
+    animation: mask 2s .1s steps(24) both;
     float:left;
 
 }
@@ -107,7 +115,7 @@ body{
 }
 
 .listbtn{
-    height:3vw;
+    height:2.4vw;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -131,6 +139,10 @@ body{
 
 #listbtn-about{
     animation: float-no-shadow 6s -4s ease-in-out infinite;
+}
+
+#listbtn-home{
+    animation: float-no-shadow 6s -5s ease-in-out infinite;
 }
 
 
