@@ -4,7 +4,7 @@ $(
         
         $("#map").scrollTop(document.getElementById("map").scrollTop + $("#home").offset().top);
         $("#map").scrollLeft(document.getElementById("map").scrollLeft + $("#home").offset().left);
-        // $('html body').scrollTop(100);
+        $('html body').scrollTop(100);
     }
 )
 
