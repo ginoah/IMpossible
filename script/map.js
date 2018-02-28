@@ -4,13 +4,23 @@ $(
         
         $("#map").scrollTop(document.getElementById("map").scrollTop + $("#home").offset().top);
         $("#map").scrollLeft(document.getElementById("map").scrollLeft + $("#home").offset().left);
+        sail("boat");
+        sail("ship");
+
         
+
     }
 )
 
 var wait=2500;
 var duration=1000;
 var scroll_mode=false;
+
+function sail(id){
+    $("#"+id).addClass("sail");
+    setTimeout(function(){$("#"+id).removeClass("sail")},5000);
+    setTimeout(function(){sail(id);},(Math.random()*10+7)*1000);
+};
 
 
 $("#btn-mode").click(function(){
