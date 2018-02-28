@@ -10,7 +10,6 @@
     position:absolute;
     z-index: 50;
     overflow: hidden;
-    cursor:cell;
 }
 
 #photos-1{
@@ -66,6 +65,7 @@
 }
 #picture-4{
     height:100%;
+    left:-3vw;
 }
 #picture-5{
     height:100%;
@@ -83,18 +83,17 @@ figure img {
     transition:-webkit-filter 0.3s ease-in-out;
     position:relative; z-index:-1;
 }
-
+/*
 figure:hover { 
     background:none; 
 }
 figure:hover img { 
     -webkit-filter:sepia(0) brightness(1) contrast(1); 
-}
+}*/
 
 figure { 
     margin:0px;
 }
-
 
 
 

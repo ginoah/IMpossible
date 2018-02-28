@@ -1,4 +1,7 @@
 #newspaper-container{
+    padding-top:2vw;
+    padding-bottom:2vw;
+    box-sizing: border-box;
     position:relative;
     left:120vw;
     top:88vw;

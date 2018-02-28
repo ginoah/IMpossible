@@ -8,9 +8,24 @@ $(
         sail("ship");
 
         
-
     }
 )
+
+// window.onresize = function(event) {
+//     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+//     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    
+//     if(h < w*0.55){
+//         var neww = h/0.55;
+//         var newWidth = neww*0.95;
+//         var newHeight = neww*0.55;
+//         var newMargin = (w - newWidth)/2;
+//         $("#map-container").css("height",newHeight.toString());
+//         $("#map-container").css("width",newWidth.toString());
+//         $("#map-container").css("margin-left",newMargin.toString());
+//     }
+// };
+
 
 var wait=2500;
 var duration=1000;

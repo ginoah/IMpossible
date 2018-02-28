@@ -1,6 +1,7 @@
 body{
     background:url(../image/woodtable.jpg);
     background-size: 100%;
+    overflow: auto;
 }
 
 
@@ -84,7 +85,7 @@ body{
     cursor: pointer;
 }
 #btn-mode:hover{
-    filter: drop-shadow(0vw 0.5vw 1vw brown);
+    filter: drop-shadow(0vw 0.5vw 1vw #BB5500);
 }
 
 #boat{
@@ -217,13 +218,13 @@ body{
     left:3vw;
     width: 7vw;
     height: 3vw;
-    padding-top:1vw;
     text-align: center;
     padding:0px;
     
 }
 
 .icontextimg{
+    margin-top:1vw;
     height: 1vw;
 }
 
@@ -248,7 +249,7 @@ body{
 }
 
 #information-3{
-    top:0vw;
+    top:3vw;
 }
 
 #information-4{
