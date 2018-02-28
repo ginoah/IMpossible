@@ -1,5 +1,6 @@
 body{
     background:url(../image/woodtable.jpg);
+    background-size: 100%;
 }
 
 
@@ -101,10 +102,10 @@ body{
 #manu-shadow{
     position:fixed;
     z-index: 80;
-    width:10vw;
+    width:16vw;
     height: 15vw;
     top:8vw;
-    left:8vw;
+    left:5vw;
 }
 
 #list{
@@ -149,6 +150,8 @@ body{
 
 
 .icon{
+    display:inline-block;
+    box-sizing: border-box;
     position:absolute;
     left:0vw;
     width:3vw;
@@ -161,6 +164,7 @@ body{
 }
 
 .icontext{
+    display:inline-block;
     position: absolute;
     box-sizing: border-box;
     left:3vw;
@@ -168,6 +172,7 @@ body{
     height: 3vw;
     padding-top:1vw;
     text-align: center;
+    padding:0px;
     
 }
 
@@ -308,14 +313,6 @@ body{
     left:3vw;
 }
 
-/*.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
 
 .btn {
     position:fixed;
@@ -333,17 +330,17 @@ body{
     cursor: pointer;
 }
 
-/*.btn-back {
-    position:fixed;
-    
-    width: 16vw;
-
+#mobile{
+    position: fixed;
     box-sizing: border-box;
-    border-radius: 10%;
+    border: red solid;
+    width: 70vw;
+    height: 40vw;
+    left: 15vw;
+    top: 100vw;
+    z-index: 500;
 
-    filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.6));
-    transform: translatey(0px);
-}*/
+}
 
 
 @keyframes float {
