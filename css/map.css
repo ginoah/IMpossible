@@ -32,7 +32,7 @@ body{
     height:100%;
     overflow: hidden;
     padding: 0px;
-    -webkit-mask-image: url(../image/fuckugino3.png);
+    -webkit-mask-image: url(../image/mask.png);
     -webkit-mask-size:100% 100%;
     /*-webkit-mask-position:-3.3vw -2vw;
     -webkit-mask-size:105% 105%;*/
@@ -412,8 +412,8 @@ body{
 }
 
 .dot1, .dot2 {
-  width: 60%;
-  height: 60%;
+  width: 40%;
+  height: 40%;
   display: inline-block;
   position: absolute;
   top: 0;
