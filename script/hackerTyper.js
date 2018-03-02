@@ -31,12 +31,16 @@ $(
     function(){
         var audio = new Audio('audio/gear.m4a');
         audio.play();
-        $( document ).keydown(
+
+        setTimeout(function(){
+            $( document ).keydown(
             function ( event ) { 
                 if(!Typer.garbleding)
                     Typer.addText( event ); //Capture the keydown event and call the addText, this is executed on page load
             }
         );
+        },6000);
+        
         $("#console").on("click",function(){Typer.autoAddText(500);});
         Typer.init();
         setTimeout(function(){$("#console").fadeIn(2000);},10000);

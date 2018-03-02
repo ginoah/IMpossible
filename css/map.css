@@ -59,7 +59,7 @@ body{
     -webkit-mask-image: url(../image/ink.png);
     -webkit-mask-position:0% -1%;
     -webkit-mask-size:833% 33%;
-    animation: mask 2s .1s steps(24) both;
+    
     float:left;
 
 }

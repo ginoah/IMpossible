@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/photos.css">
     <link rel="stylesheet" href="css/newspaper.css">
+    
+    <link rel="Shortcut Icon" type="image/x-icon" href="image/ori.ico"/>
 
-    <script src='script/jquery.min.js' type='text/javascript'></script> 
-    <script src='script/jquery-ui.min.js' type='text/javascript'></script> 
-    <script src='script/map.js' type='text/javascript'></script>
-    <script src='script/photos.js' type='text/javascript'></script>
+    
 
 </head>
 <body>
@@ -178,12 +177,15 @@
             <img src="image/mobile.png" alt="this is phone" id="phone">
         </div>
     </div>
-    <script src='script/map.js' type='text/javascript'></script> 
+
+    <script src='script/jquery.min.js' type='text/javascript'></script> 
+    <script src='script/jquery-ui.min.js' type='text/javascript'></script> 
+    <script src='script/map.js' type='text/javascript'></script>
+    <script src='script/photos.js' type='text/javascript'></script>
     <script>
       function hide( ) {
         $("#divLoading").fadeOut(1000);
-        // _oTag = document.getElementById("divLoading");
-        // _oTag.style.display = "none";  //隱藏動畫
+        $("#bkground").css("animation","mask 2s .1s steps(24) both");
       }
 
       if (window.attachEvent) {
