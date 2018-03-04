@@ -6,7 +6,10 @@ $(
         $("#map").scrollLeft(document.getElementById("map").scrollLeft + $("#home").offset().left);
         sail("boat");
         sail("ship");
-
+        dogwalk("dog1");
+        setTimeout(dogwalk,100,"dog2");
+        setInterval(wagtail,250,"dog1");
+        setInterval(wagtail,250,"dog2");
         
     }
 )
@@ -37,6 +40,22 @@ function sail(id){
     setTimeout(function(){sail(id);},(Math.random()*10+7)*1000);
 };
 
+function dogwalk(id){
+    var Class=$('#'+id).attr('class');
+    $('#'+id).removeClass(Class);
+    $("#"+id).addClass("walk"+id[id.length-1]+" "+Class);
+    setTimeout(function(){$("#"+id).removeClass("walk"+id[id.length-1])},5000);
+    setTimeout(function(){dogwalk(id);},(Math.random()*10+7)*1000);
+};
+
+function wagtail(id){
+    var lastClass = $('#'+id).attr('class').split(' ').pop();
+    $('#'+id).removeClass(lastClass);
+    if(lastClass=="dog1")
+        $('#'+id).addClass("dog2");
+    else
+        $('#'+id).addClass("dog1");
+};
 
 $("#btn-mode").click(function(){
     if(scroll_mode){

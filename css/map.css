@@ -1,5 +1,5 @@
 body{
-    background:url(../image/woodtable2.jpg);
+    background:url(../image/woodtable3.jpg);
     background-size: 100%;
     overflow: auto;
 }
@@ -108,6 +108,30 @@ body{
     background-size: 100%;
 }
 
+#dog1{
+    position: absolute;
+    width:5vw;
+    height:5vw;
+    left:288vw;
+    top:78vw;
+    background-size: 100%;
+}
+#dog2{
+    position: absolute;
+    width:5vw;
+    height:5vw;
+    left:275vw;
+    top:70vw;
+    transform:scaleX(-1);
+    background-size: 100%;
+}
+.dog1{
+    background: url(../image/dog.png);
+}
+.dog2{
+    background: url(../image/dog2.png);
+}
+
 .sail{
     animation: sail 5s 0s ease-in-out infinite;
 }
@@ -120,7 +144,7 @@ body{
         transform: translateX(0vw);
     }
     40%{
-        transform: translateX(10vw);
+        transform: translateX(10vw) ;
     }
     60%{
         transform: translateX(10vw) scaleX(-1);
@@ -132,7 +156,52 @@ body{
         transform: translateX(0vw) scaleX(1);
     }
 }
-
+.walk1{
+    animation: walk1 5s 0s ease-in-out infinite;
+}
+.walk2{
+    animation: walk2 5s 0s ease-in-out infinite;
+}
+@keyframes walk1{
+    0%{
+        transform: translateX(0vw);
+    }
+    20%{
+        transform: translateX(0vw);
+    }
+    40%{
+        transform: translateX(-8vw) scaleX(1);
+    }
+    60%{
+        transform: translateX(-8vw) scaleX(-1);
+    }
+    80%{
+        transform: translateX(0vw) scaleX(-1);
+    }
+    100%{
+        transform: translateX(0vw) scaleX(1);
+    }
+}
+@keyframes walk2{
+    0%{
+        transform: translateX(0vw) scaleX(-1);
+    }
+    20%{
+        transform: translateX(0vw) scaleX(-1);
+    }
+    40%{
+        transform: translateX(12vw) scaleX(-1);
+    }
+    60%{
+        transform: translateX(12vw) scaleX(1);
+    }
+    80%{
+        transform: translateX(0vw) scaleX(1);
+    }
+    100%{
+        transform: translateX(0vw) scaleX(-1);
+    }
+}
 
 
 #manu{

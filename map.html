@@ -32,6 +32,8 @@
             <div id="btn-mode"><img src="image/mode_icon.png" alt="mode" style="width: 100%;"></div>
             <div id="boat"></div>
             <div id="ship"></div>
+            <div id="dog1" class="dog1"></div>
+            <div id="dog2" class="dog2"></div>
 
             <a class="anchor" id="information-1"></a>
             <a class="anchor" id="information-2"></a>
@@ -57,7 +59,7 @@
                 </img>
             </div>
         </div>
-        <div style="display:block;text-align:center;line-height:3vw;color:sienna;position:fixed;width:100%">
+        <div style="text-align:center;line-height:3vw;color:sienna;position:fixed;width:95%">
            <span style="font-size:2vw">Copyright &copy; 2018 國立臺灣大學資訊管理營 Designed by 陳漢威 &amp; 黃意芹 &amp; 朱元均</span>
         </div>
         <div id="button">
@@ -185,7 +187,7 @@
     <script>
       function hide( ) {
         $("#divLoading").fadeOut(1000);
-        $("#bkground").css("animation","mask 2s .1s steps(24) both");
+        $("#bkground").css("animation","mask 2s .5s steps(24) both");
       }
 
       if (window.attachEvent) {
