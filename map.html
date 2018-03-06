@@ -25,7 +25,7 @@
     <div id="map-container">
         <div id="map">
 
-            <img src="image/main5.jpg" alt="this is background" id = "bkground">
+            <img src="image/main6.jpg" alt="this is background" id = "bkground">
             
 
             <a class="anchor" id="home">home</a>
@@ -39,6 +39,15 @@
             <a class="anchor" id="information-1"></a>
             <a class="anchor" id="information-2"></a>
             <a class="anchor" id="information-3"></a>
+            <img src="./image/1-2-0.png" alt="rpg" class="schedule-img" id="schedule-1-2">
+            <img src="./image/1-3-0.png" alt="course" class="schedule-img" id="schedule-1-3">
+            <img src="./image/1-4-0.png" alt="escape" class="schedule-img" id="schedule-1-4">
+            <img src="./image/2-1-0.png" alt="course" class="schedule-img" id="schedule-2-1">
+            <img src="./image/2-3-0.png" alt="course" class="schedule-img" id="schedule-2-3">
+            <img src="./image/2-4-0.png" alt="casino" class="schedule-img" id="schedule-2-4">
+            <img src="./image/3-1-0.png" alt="course" class="schedule-img" id="schedule-3-1">
+            <img src="./image/3-3-0.png" alt="rpg" class="schedule-img" id="schedule-3-3">
+            <img src="./image/3-4-0.png" alt="prom" class="schedule-img" id="schedule-3-4">
             <a class="anchor" id="information-4"></a>
             <a class="anchor" id="photos">photos</a>
 
@@ -67,15 +76,15 @@
                     <h2 class="fs-title">報名須知</h2>
                     <div class="col-sm-10" style="text-align:center;">
                         <div id="set0-content">
-                            <div class="set0-title">※活動名稱：</div>　2017國立台灣大學資訊管理營<br>
+                            <div class="set0-title">※活動名稱：</div>　2018國立台灣大學資訊管理營<br>
                             <div class="set0-title">※主辦單位：</div>　國立臺灣大學資訊管理學系學會<br>
                             <div class="set0-title">※活動宗旨：</div>　臺大資管系特別為全國高中生舉辦為期四天三夜的暑期營隊，希望藉由本營隊增進學員們對臺大資管系的認識。本營隊將教導實用的電腦應用技能，與實務上的商業設計和行銷，讓高中生對於資訊管理能有更深入的了解，進而啟發興趣。並期望他們能認識有相同興趣的同好，留下一段美好的友誼和回憶。<br>
                             <div class="set0-title">※活動性質：</div>　大學暑期營隊(給高中生)<br>
                             <div class="set0-title">※活動對象：</div>　全國各公私立高級中學學生，預計招收100名學員。<br>
-                            <div class="set0-title">※活動日期：</div>　2017年7月3日(一)至7月6日(四)，共四天三夜。<br>
+                            <div class="set0-title">※活動日期：</div>　2018年7月3日(二)至7月6日(五)，共四天三夜。<br>
                             <div class="set0-title">※活動地點：</div>　國立臺灣大學校總區(台北市大安區羅斯福路四段一號)<br>
-                            <div class="set0-title">※活動費用：</div>　新台幣5500元整。含保險、食宿、交通、教材⋯等等。<br>　<b>兩人團報</b>費用為新台幣5300元整<br>　<b>三人團報</b>費用為新台幣5200元整<br>
-                            <div class="set0-title">※繳費須知：</div>　本團隊將於2017年5月15日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
+                            <div class="set0-title">※活動費用：</div>　新台幣6000元整。含保險、食宿、交通、教材⋯等等。<br>
+                            <div class="set0-title">※繳費須知：</div>　本團隊將於2018年6月7日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
                         </div>
                         <div class="form-group" style="text-align: center;margin-bottom:1vh">
                             <div class="col-sm-10">
@@ -262,6 +271,16 @@
                   </fieldset>
                 </form>
             </div>
+
+            <div id="regpopup" style="display:none">
+                恭喜你完成報名!<br>
+                錄取名單將公佈於粉專，<br>
+                期待這個夏天與你相見!<br>
+                <img src="" alt="" style="width:50%">
+                <div id="regpopBtn">OK!</div>
+            </div>
+
+
             <a class="anchor" id="about">about</a>
 
             <div id="newspaper-container">
@@ -403,7 +422,7 @@
     <script>
       function hide( ) {
         $("#divLoading").fadeOut(1000);
-        $("#bkground").css("animation","mask 2s .5s steps(24) both");
+        $("#bkground").css("animation","mask 2s .1s steps(24) both");
       }
 
       if (window.attachEvent) {

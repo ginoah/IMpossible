@@ -57,6 +57,17 @@ function wagtail(id){
         $('#'+id).addClass("dog1");
 };
 
+$(".schedule-img").hover(function(){
+    var src = $(this).attr("src").substring(0,12);
+    src+="1.png";
+    $(this).attr("src",src);
+});
+$(".schedule-img").mouseleave(function(){
+    var src = $(this).attr("src").substring(0,12);
+    src+="0.png";
+    $(this).attr("src",src);
+});
+
 $("#btn-mode").click(function(){
     if(scroll_mode){
         $("#map").css("overflow","hidden");

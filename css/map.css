@@ -204,6 +204,55 @@ body{
 }
 
 
+.schedule-img{
+    position:absolute;
+    width:16vw;
+}
+
+#schedule-1-2{
+    left:10vw;
+    top:29vw;
+}
+
+#schedule-1-3{
+    left:10vw;
+    top:37vw;
+}
+
+#schedule-1-4{
+    left:10vw;
+    top:45vw;
+}
+
+#schedule-2-1{
+    left:29.5vw;
+    top:21vw;
+}
+
+#schedule-2-3{
+    left:29.5vw;
+    top:37vw;
+}
+
+#schedule-2-4{
+    left:29.5vw;
+    top:45vw;
+}
+#schedule-3-1{
+    left:48vw;
+    top:21vw;
+}
+
+#schedule-3-3{
+    left:48vw;
+    top:37vw;
+}
+
+#schedule-3-4{
+    left:48vw;
+    top:45vw;
+}
+
 #manu{
     position:fixed;
     z-index: 90;

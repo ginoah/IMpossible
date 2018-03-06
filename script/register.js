@@ -181,10 +181,10 @@ $(document).on('click', "#regpopBtn", function() {
 });
 
 // 查看尺寸表
-$("#checkSize").on("click", function(){
+$("#checkSize").hover(function(){
   $("#clothSize").addClass('activePopup');
   $("#clothSize").fadeIn(500);
 })
-$("#clothSize .closePopup").on('click', function(){
+$("#clothSize").mouseleave(function(){
   $("#clothSize").fadeOut('fast');
 })
