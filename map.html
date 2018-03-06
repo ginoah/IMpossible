@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/photos.css">
     <link rel="stylesheet" href="css/newspaper.css">
-    
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/register-style.css">
     <link rel="Shortcut Icon" type="image/x-icon" href="image/ori.ico"/>
 
     
@@ -24,7 +25,7 @@
     <div id="map-container">
         <div id="map">
 
-            <img src="image/main4.jpg" alt="this is background" id = "bkground">
+            <img src="image/main5.jpg" alt="this is background" id = "bkground">
             
 
             <a class="anchor" id="home">home</a>
@@ -51,6 +52,216 @@
 
             <a class="anchor" id="register-1">register-1</a>
             <a class="anchor" id="register-2">register-2</a>
+            <div id="register">
+                <form id="msform" class="form-inline">
+                    <!-- progressbar -->
+                  <ul id="progressbar">
+                    <li class="active"><span>報名須知</span></li>
+                    <li><span>基本資料</span></li>
+                    <li><span>聯絡資料</span></li>
+                    <li><span>個人資料</span></li>
+                  </ul>
+
+                  <!-- fieldsets -->
+                  <fieldset id="set0">
+                    <h2 class="fs-title">報名須知</h2>
+                    <div class="col-sm-10" style="text-align:center;">
+                        <div id="set0-content">
+                            <div class="set0-title">※活動名稱：</div>　2017國立台灣大學資訊管理營<br>
+                            <div class="set0-title">※主辦單位：</div>　國立臺灣大學資訊管理學系學會<br>
+                            <div class="set0-title">※活動宗旨：</div>　臺大資管系特別為全國高中生舉辦為期四天三夜的暑期營隊，希望藉由本營隊增進學員們對臺大資管系的認識。本營隊將教導實用的電腦應用技能，與實務上的商業設計和行銷，讓高中生對於資訊管理能有更深入的了解，進而啟發興趣。並期望他們能認識有相同興趣的同好，留下一段美好的友誼和回憶。<br>
+                            <div class="set0-title">※活動性質：</div>　大學暑期營隊(給高中生)<br>
+                            <div class="set0-title">※活動對象：</div>　全國各公私立高級中學學生，預計招收100名學員。<br>
+                            <div class="set0-title">※活動日期：</div>　2017年7月3日(一)至7月6日(四)，共四天三夜。<br>
+                            <div class="set0-title">※活動地點：</div>　國立臺灣大學校總區(台北市大安區羅斯福路四段一號)<br>
+                            <div class="set0-title">※活動費用：</div>　新台幣5500元整。含保險、食宿、交通、教材⋯等等。<br>　<b>兩人團報</b>費用為新台幣5300元整<br>　<b>三人團報</b>費用為新台幣5200元整<br>
+                            <div class="set0-title">※繳費須知：</div>　本團隊將於2017年5月15日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
+                        </div>
+                        <div class="form-group" style="text-align: center;margin-bottom:1vh">
+                            <div class="col-sm-10">
+                                <input type="radio" name="check" value="checked">我同意
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="next" class="next action-button" value="Next" id="page1"/>
+                  </fieldset>
+
+                  <fieldset id="set1">
+                    <h2 class="fs-title">基本資料</h2>
+                    <!-- 姓名、性別、出生年月日、身分證字號、(血型)、學校、年級、類組、特殊飲食習慣、葷素、特殊疾病、營服尺寸-->
+                    <div class="form-group">
+                        <label class="control-label" for="username">姓名:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="username" placeholder="請輸入姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="gender">性別:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="gender" value="male">生理男
+                            <input type="radio" name="gender" value="female">生理女
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="birthday">出生年月日:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="birthday" placeholder="XXXX-XX-XX">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">身分證字號:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="password" placeholder="請輸入身分證字號">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="bloodType">血型:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="bloodType" value="O" >O
+                            <input type="radio" name="bloodType" value="A">A
+                            <input type="radio" name="bloodType" value="B">B
+                            <input type="radio" name="bloodType" value="AB">AB
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="school">學校:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="school" placeholder="請輸入學校">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="grade">年級:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="grade" value="0">升高一<br class="mobile-br">
+                            <input type="radio" name="grade" value="1" >升高二<br class="mobile-br">
+                            <input type="radio" name="grade" value="2">升高三<br class="mobile-br">
+                            <input type="radio" name="grade" value="3">升大一
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="type">類組:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="type" value="first" >一類組<br class="mobile-br">
+                            <input type="radio" name="type" value="second">二類組<br class="mobile-br">
+                            <input type="radio" name="type" value="third">三類組<br class="mobile-br">
+                            <input type="radio" name="type" value="other">未分組
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="vegan">葷素:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="vegan" value="meat">葷
+                            <input type="radio" name="vegan" value="veg">素
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="mSpecial">特殊飲食習慣:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="mSpecial" value="none" style="margin-bottom:0px" >無
+                            <input type="radio" name="mSpecial" value="yes" style="margin-bottom:0px" id="mSpecial-yes">有
+                            <input type="text" name="mSpecialText" placeholder="ex:不吃牛肉" style="margin-top:0px">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="sSpecial">特殊疾病:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="sSpecial" value="none" style="margin-bottom:0px" >無
+                            <input type="radio" name="sSpecial" value="yes" style="margin-bottom:0px" id="sSpecial-yes">有
+                            <input type="text" name="sSpecialText" placeholder="如果有，請詳述" style="margin-top:0px">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="size">營服尺寸: <span id="checkSize">查看尺寸表</span></label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="size" value="S" >S
+                            <input type="radio" name="size" value="M">M
+                            <input type="radio" name="size" value="L">L
+                            <input type="radio" name="size" value="XL">XL
+                        </div>
+                        <!-- 顯示尺寸表 -->
+                        <div id="clothSize" style="color:#1E6262;font-size:20px;display:none;">
+                            <span class="closePopup" style="color:#ccc;border:solid;"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                            <img src="./image/castle_icon.png" alt="">
+                        </div>
+
+                    </div>
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                  </fieldset>
+
+                  <fieldset id="set2">
+                    <h2 class="fs-title">個人聯絡資料</h2>
+                    <!-- FB、Email、連絡電話、緊急聯絡人(名字、關係、電話)、(聯絡地址)-->
+                    <div class="form-group">
+                        <label class="control-label" for="tel">聯絡電話:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="tel" placeholder="請輸入聯絡電話">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="facebook">Facebook:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="facebook" placeholder="請輸入fb帳號或網址">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email" placeholder="請輸入信箱">
+                        </div>
+                    </div>
+                    <h2 class="fs-title">緊急聯絡人資料</h2>
+                    <div class="form-group">
+                        <label class="control-label" for="emergencyContact">緊急聯絡人:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="emergencyContact" placeholder="請輸入緊急聯絡人姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="emergencyRel">關係:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="emergencyRel" placeholder="請輸入與緊急聯絡人關係">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="emergencyTel">緊急連絡電話:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="emergencyTel" placeholder="請輸入緊急聯絡人之手機號碼">
+                        </div>
+                    </div>
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                  </fieldset>
+
+                  <fieldset id="set3">
+                    <h2 class="fs-title">個人資料</h2>
+                    <!-- 自我介紹、報名動機、對營隊的期許、(參加過的營隊)、如何得知本營隊 -->
+                    <div class="form-group">
+                        <label class="control-label" for="selfIntro">自我介紹(請簡述150字以內)</label>
+                        <div class="col-sm-10">
+                            <textarea name="selfIntro" rows="10" cols="60"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="mot">報名動機(請簡述150字以內)</label>
+                        <div class="col-sm-10">
+                            <textarea name="mot" rows="10" cols="60"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="demand">對營隊的期許(請簡述150字以內)</label>
+                        <div class="col-sm-10">
+                            <textarea name="demand" rows="10" cols="60"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="contactUs">想對我們說的話（若有參加團報優惠者，請在此欄註明至多兩位同學的名字）</label>
+                        <div class="col-sm-10">
+                            <textarea name="contactUs" rows="2" cols="60"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                  </fieldset>
+                </form>
+            </div>
             <a class="anchor" id="about">about</a>
 
             <div id="newspaper-container">
@@ -180,10 +391,15 @@
         </div>
     </div>
 
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script src='script/jquery.min.js' type='text/javascript'></script> 
-    <script src='script/jquery-ui.min.js' type='text/javascript'></script> 
+    <script src='script/jquery-ui.min.js' type='text/javascript'></script>
+    <script src='script/jquery.validate.js' type='text/javascript'></script>
+    <script src="script/register.js" type="text/javascript"></script>
     <script src='script/map.js' type='text/javascript'></script>
     <script src='script/photos.js' type='text/javascript'></script>
+    
     <script>
       function hide( ) {
         $("#divLoading").fadeOut(1000);
