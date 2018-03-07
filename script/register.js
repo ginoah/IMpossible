@@ -13,17 +13,17 @@
 var database = firebase.database();
 
 
-$(".submit").on("click",function(){
-    writeUserData("31","gino","a@a.com","url");
-});
+// $(".submit").on("click",function(){
+//     writeUserData("31","gino","a@a.com","url");
+// });
 
-function writeUserData(userId, name, email, imageUrl) {
-      firebase.database().ref('users/' + userId).set({
-        username: name,
-        email: email,
-        profile_picture : imageUrl
-      });
-}
+// function writeUserData(userId, name, email, imageUrl) {
+//       firebase.database().ref('users/' + userId).set({
+//         username: name,
+//         email: email,
+//         profile_picture : imageUrl
+//       });
+// }
 
 // // Custom method to validate username
 $.validator.addMethod("usernameRegex", function(value, element) {
@@ -152,19 +152,19 @@ $(".submit").click(function(){
     var reg = $('#msform').serializeObject();
     $.ajax({
         type: 'POST',
-        url: './register',//到時候會變成正確的位置
+        url: 'https://ntu-im-camp-2018.firebaseio.com/users.json',//到時候會變成正確的位置
         data: JSON.stringify(reg),
         success: function(data,Textmsg){
-      console.log(data)
-      if(data.msg=="success"){
-        $("#regpopup").fadeIn();
-        return $("#regpopup").addClass('activePopup');
+          console.log(data)
+          if(data.name!=""){
+            $("#regpopup").fadeIn();
+            return $("#regpopup").addClass('activePopup');
 
-      }
-      else{
-        alert("請洽粉專管理團隊：\n"+data.msg.message);
-        return window.location = "./register";
-      };
+          }
+          else{
+            alert("請洽粉專管理團隊：\n");
+            return window.location = "./";
+          };
 
         },
         contentType: "application/json",
@@ -173,11 +173,12 @@ $(".submit").click(function(){
 
 
 
+
 })
 
 // 當點擊popup上的"OK!"按鈕，popup會關閉，並連結到首頁
 $(document).on('click', "#regpopBtn", function() {
-  location.href = "/";
+  location.href = "./";
 });
 
 // 查看尺寸表

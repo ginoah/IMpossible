@@ -268,10 +268,10 @@ body{
 #manu-shadow{
     position:fixed;
     z-index: 80;
-    width:16vw;
+    width:10vw;
     height: 15vw;
     top:8vw;
-    left:5vw;
+    left:8vw;
 }
 
 #list{
