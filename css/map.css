@@ -45,10 +45,11 @@ body{
 }
 
 #button{
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
-    width:0px;
-    height:0px;
+    top:0vw;
+    width:0vw;
+    height:0vw;
 }
 
 
@@ -254,7 +255,7 @@ body{
 }
 
 #manu{
-    position:fixed;
+    position:absolute;
     z-index: 90;
     width:20vw;
     height: 22vw;
@@ -266,7 +267,7 @@ body{
 }
 
 #manu-shadow{
-    position:fixed;
+    position:absolute;
     z-index: 80;
     width:10vw;
     height: 15vw;
@@ -338,7 +339,6 @@ body{
     height: 3vw;
     text-align: center;
     padding:0px;
-    
 }
 
 .icontextimg{
@@ -450,7 +450,7 @@ body{
     left:42vw;
 }
 .down{
-    top:50vw;
+    top:48vw;
     left:42vw;
 }
 .left{
@@ -459,31 +459,30 @@ body{
 }
 .right{
     top:25vw;
-    left:82vw;
+    left:80vw;
 }
 
 .rightup{
     top:2vw;
-    left:82vw;
+    left:80vw;
 }
 
 .rightdown{
-    top:50vw;
-    left:82vw;
+    top:48vw;
+    left:80vw;
 }
 .leftup{
     top:2vw;
     left:3vw;
 }
 .leftdown{
-    top:50vw;
+    top:48vw;
     left:3vw;
 }
 
 
 .btn {
-    position:fixed;
-    
+    position:absolute;
     width: 16vw;
 
     z-index: 100;

@@ -10,7 +10,10 @@ $(
         setTimeout(dogwalk,100,"dog2");
         setInterval(wagtail,250,"dog1");
         setInterval(wagtail,250,"dog2");
-        
+        var audio = new Audio('audio/mapBgm.m4a');
+        audio.play();
+        audio.loop=true;
+        audio.volume=0.1;
     }
 )
 
