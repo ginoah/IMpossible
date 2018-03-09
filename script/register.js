@@ -60,6 +60,7 @@ $(".next").click(function(){
       mSpecialText:{required:'#mSpecial-yes:checked'},
       sSpecial:{required:true}, //radio
       sSpecialText:{required:'#sSpecial-yes:checked'},
+      computer:{required:true},
       size:{required:true}, //radio
       tel:{required:true,digits:true},
       facebook:{required:true},
@@ -151,6 +152,7 @@ $(".submit").click(function(){
   }
   event.preventDefault();
     var reg = $('#msform').serializeObject();
+    console.log(reg);
     $.ajax({
         type: 'POST',
         url: 'https://ntu-im-camp-2018.firebaseio.com/users.json',//到時候會變成正確的位置

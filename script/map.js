@@ -14,6 +14,7 @@ $(
         audio.play();
         audio.loop=true;
         audio.volume=0.1;
+        move("dance");
     }
 )
 
@@ -53,6 +54,8 @@ function dogwalk(id){
     setTimeout(function(){dogwalk(id);},(Math.random()*10+7)*1000);
 };
 
+
+
 function wagtail(id){
     var lastClass = $('#'+id).attr('class').split(' ').pop();
     $('#'+id).removeClass(lastClass);
@@ -60,6 +63,18 @@ function wagtail(id){
         $('#'+id).addClass("dog2");
     else
         $('#'+id).addClass("dog1");
+};
+
+
+
+function move(id){
+    var src = $("#"+id).attr("src");
+    var filetype = src.substring(src.length-3,src.length);
+    if(filetype == "jpg"){
+        $("#"+id).attr("src",src.substring(0,src.length-3)+"gif");
+        setTimeout(function(id,src){$("#"+id).attr("src",src.substring(0,src.length-3)+"jpg")},3000,id,src);
+        setTimeout(function(){move(id);},(Math.random()*6+2)*1000);
+    }
 };
 
 $(".schedule-img").hover(function(){
