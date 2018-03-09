@@ -30,7 +30,7 @@ function move(id,time){
     if(filetype == "jpg"){
         $("#"+id).attr("src",file+"gif");
         setTimeout(function(){$("#"+id).attr("src",file+"jpg");console.log(id,file)},time);
-        setTimeout(function(){move(id,time);},(Math.random()*2+time/1000)*1000);
+        setTimeout(function(){move(id,time);},(Math.random()*10+time/1000)*1000);
     }
 };
 
