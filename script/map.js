@@ -14,9 +14,25 @@ $(
         audio.play();
         audio.loop=true;
         audio.volume=0.1;
-        move("dance");
+        move("convene1",3500);
+        move("convene2",1200);
+        move("convene3",5000);
     }
 )
+
+function move(id,time){
+    console.log(id,time);
+    var src = $("#"+id).attr("src");
+    var len = src.length;
+    var filetype = src.substring(len-3,len);
+    var file = src.substring(0,len-3);
+    console.log(filetype);
+    if(filetype == "jpg"){
+        $("#"+id).attr("src",file+"gif");
+        setTimeout(function(){$("#"+id).attr("src",file+"jpg");console.log(id,file)},time);
+        setTimeout(function(){move(id,time);},(Math.random()*2+time/1000)*1000);
+    }
+};
 
 // window.onresize = function(event) {
 //     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -67,15 +83,7 @@ function wagtail(id){
 
 
 
-function move(id){
-    var src = $("#"+id).attr("src");
-    var filetype = src.substring(int(src.length-3),int(src.length));
-    if(filetype == "jpg"){
-        $("#"+id).attr("src",src.substring(0,int(src.length-3))+"gif");
-        setTimeout(function(id,src){$("#"+id).attr("src",src.substring(0,src.length-3)+"jpg")},3000,id,src);
-        setTimeout(function(){move(id);},(Math.random()*6+2)*1000);
-    }
-};
+
 
 $(".schedule-img").hover(function(){
     var src = $(this).attr("src").substring(0,12);
