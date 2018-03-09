@@ -1,7 +1,9 @@
 
 $(
     function(){
+
         
+        detectos();
         $("#map").scrollTop(document.getElementById("map").scrollTop + $("#home").offset().top);
         $("#map").scrollLeft(document.getElementById("map").scrollLeft + $("#home").offset().left);
         sail("boat");
@@ -27,6 +29,30 @@ $(
     }
 )
 
+
+function detectos(){
+    var OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+    if(OSName == "Windows"){
+        $("#convene1").css("top","9.7vw").css("left","29.5vw");
+        $("#convene2").css("left","15vw");
+        $("#convene3").css("width","13.5vw");
+        $("#convene4").css("top","22.8vw").css("left","51vw");
+        $("#activity-back").css("top","49vw").css("width","18.3vw");
+        $("#activity").css("top","54vw").css("width","18.3vw");
+        $("#finance").css("width","9vw").css("top","59vw").css("left","20vw");
+        $("#editor").css("top","49vw").css("left","29.3vw");
+        $("#course-back").css("top","49vw");
+        $("#course").css("top","55vw");
+        $("#art").css("top","69vw").css("width","20vw").css("height","19vw");
+        $("#mis").css("top","88.8vw").css("width","13.5vw");
+        $("#accompany").css("top","88.8vw").css("left","43.8vw");
+    }
+};
 function move(id,time){
     var src = $("#"+id).attr("src");
     var len = src.length;
@@ -34,7 +60,7 @@ function move(id,time){
     var file = src.substring(0,len-3);
     if(filetype == "jpg"){
         $("#"+id).attr("src",file+"gif");
-        setTimeout(function(){$("#"+id).attr("src",file+"jpg");console.log(id,file)},time);
+        setTimeout(function(){$("#"+id).attr("src",file+"jpg");},time);
         setTimeout(function(){move(id,time);},(Math.random()*20+time/1000)*1000);
     }
 };
