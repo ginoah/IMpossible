@@ -43,18 +43,16 @@
 
 #convene2{
     width: 14vw;
-    height: 13.5vw;
-    left:0.8vw;
+    height: 13.4vw;
+    left:15.7vw;
     top:16.5vw;
-    
 }
 
 #convene3{
     width: 14vw;
-    height: 13.4vw;
-    left:15.7vw;
+    height: 13.5vw;
+    left:0.8vw;
     top:16.5vw;
-
 }
 
 #convene4{
@@ -62,15 +60,14 @@
     height: 11.1vw;
     left:52.5vw;
     top:23.3vw;
-    opacity: 0;
 }
 
 #activity{
-    width: 18.8vw;
-    height: 19.3vw;
-    top:50.8vw;
-    left:1vw;
-    opacity: 0;
+    width: 19.3vw;
+    height: 14.3vw;
+    top:56vw;
+    left:0.7vw;
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%,rgba(0, 0, 0, 1) 100% );
 }
 
 #finance{

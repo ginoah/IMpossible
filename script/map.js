@@ -17,6 +17,8 @@ $(
         move("convene1",3500);
         move("convene2",1200);
         move("convene3",5000);
+        move("convene4",3000);
+        move("activity",2000)
     }
 )
 
