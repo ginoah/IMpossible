@@ -17,7 +17,7 @@ $(
         $("#skip-button").click(function() {
             if(skipHover){
                 if(skipAll)
-                    window.location.assign("./map.html");
+                    window.location.assign("./temp.html");
                 skipAll=true;
                 Typer.end();
             }
@@ -222,7 +222,7 @@ var Typer={
             Typer.garbled(garbledstr,backup);
         }
         $(document).unbind('keydown');
-        setTimeout(function(){$('#symbol').remove();window.location.assign("./map.html");},23000);
+        setTimeout(function(){$('#symbol').remove();window.location.assign("./temp.html");},23000);
     },
     updLstChr:function(){ // blinking cursor
         var cont=this.content(); // get console 
