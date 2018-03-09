@@ -36,6 +36,8 @@ $(
 var wait=2500;
 var duration=1000;
 var scroll_mode=false;
+//var home=true;
+var changing=false;
 
 function sail(id){
     $("#"+id).addClass("sail");
@@ -72,18 +74,23 @@ $(".schedule-img").mouseleave(function(){
 });
 
 $("#btn-mode").click(function(){
-    if(scroll_mode){
-        $("#map").css("overflow","hidden");
-        $("#btn-home").trigger("click");
-        $("#manu-shadow").fadeIn(duration);
-        scroll_mode=false;
-    }
-    else{
-        $(".btn").fadeOut(duration);
-        $("#manu").fadeOut(duration);
-        $("#manu-shadow").fadeOut(duration);
-        $("#map").css("overflow","auto");
-        scroll_mode=true;
+
+    if(!changing){
+        changing=true;
+        if(scroll_mode){
+            $("#map").css("overflow","hidden");
+            $("#btn-home").trigger("click");
+            $("#manu-shadow").fadeIn(duration);
+            scroll_mode=false;
+        }
+        else{
+            $(".btn").fadeOut(duration);
+            $("#manu").fadeOut(duration);
+            $("#manu-shadow").fadeOut(duration);
+            $("#map").css("overflow","auto");
+            scroll_mode=true;
+        }
+        setTimeout(function(){changing=false;},duration);
     }
 });
 
@@ -109,6 +116,7 @@ $(".btn").click(function(){
             setTimeout(function(){$("#btn-home").removeClass(lastClass);},wait);
     }
     $('html body').scrollTop(100);
+    //home=false;
 });
 
 // $(".homebtn").click(function(){
@@ -116,7 +124,7 @@ $(".btn").click(function(){
 // });
 
 $("#btn-home").click(function(){
-    setTimeout(function(){$(".homebtn").fadeIn(duration); $("#manu").fadeIn(duration);},wait);
+    setTimeout(function(){$(".homebtn").fadeIn(duration); $("#manu").fadeIn(duration);/*home=true;*/},wait);
 });
 
 $(".informationbtn").click(function(){
@@ -169,5 +177,7 @@ $("#manu-shadow").hover(function(){
     $("#manu").fadeIn(duration);
 });
 // $("#manu-shadow").mouseleave(function(){
-//     $("#manu").fadeOut(duration);
+//     if(!home){
+//         $("#manu").fadeOut(duration);
+//     }
 // });

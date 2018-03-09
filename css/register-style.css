@@ -33,7 +33,7 @@
   line-height:5vh;
 }
 #checkSubmit{
-  background: #FFDDAA;
+  background: abc;
   color:white;
   width:100px;
   height:40px;
@@ -150,19 +150,19 @@
   text-align:left;
 }
 #msform fieldset{
-  background: #DDDDDD;
+  /*background: #DDDDDD;*/
   border: 0 none;
   border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  /*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
   padding: 20px 30px;
   box-sizing: border-box;
   width: 80%;
   margin: 10px 10% 50px 10%;
   /*stacking fieldsets above each other*/
   position: relative;
-  -webkit-mask-image: url(../image/oldpaper.png);
-  -webkit-mask-size:105% 110%;
-  -webkit-mask-position:0vw -5vw;
+  background-image: url(../image/oldpaper.png);
+  background-size:105% 110%;
+  background-position:0vw -5vw;
 }
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
@@ -177,7 +177,7 @@
   border: none;
   box-sizing: border-box;
   /*background:#E4F9F5;*/
-  background: #FFDDAA;
+  background: abc;
   font-size: 14px;
 }
 #msform input[type="text"], #msform textarea{
@@ -259,7 +259,7 @@
 .fs-title {
   font-size: 16px;
   text-transform: uppercase;
-  color: #767676;
+  color: #000000;
   margin-bottom: 10px;
 }
 /*progressbar*/
@@ -272,7 +272,7 @@
 }
 #progressbar li {
   list-style-type: none;
-  color:#625772;
+  color:#000000;
   text-transform: uppercase;
   font-size: 16px;
   width: 25%;
@@ -312,9 +312,9 @@
   background: #BB5500;
   color:white;
 }
-/*#set0{color:#767676;}*/
+/*#set0{color:#000000;}*/
 #set0-content{
-  background-color:#FFDDAA;
+  background-color:abc;
   margin:1vh 0px 2vh 0px;
   padding:0.1vh 0px 0px 0px;
   text-align:left;
