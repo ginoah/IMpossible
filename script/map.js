@@ -69,9 +69,9 @@ function wagtail(id){
 
 function move(id){
     var src = $("#"+id).attr("src");
-    var filetype = src.substring(src.length-3,src.length);
+    var filetype = src.substring(int(src.length-3),int(src.length));
     if(filetype == "jpg"){
-        $("#"+id).attr("src",src.substring(0,src.length-3)+"gif");
+        $("#"+id).attr("src",src.substring(0,int(src.length-3))+"gif");
         setTimeout(function(id,src){$("#"+id).attr("src",src.substring(0,src.length-3)+"jpg")},3000,id,src);
         setTimeout(function(){move(id);},(Math.random()*6+2)*1000);
     }
