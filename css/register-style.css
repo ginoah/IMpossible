@@ -150,7 +150,7 @@
   text-align:left;
 }
 #msform fieldset{
-  background: white;
+  background: #DDDDDD;
   border: 0 none;
   border-radius: 3px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -160,6 +160,9 @@
   margin: 10px 10% 50px 10%;
   /*stacking fieldsets above each other*/
   position: relative;
+  -webkit-mask-image: url(../image/oldpaper.png);
+  -webkit-mask-size:105% 110%;
+  -webkit-mask-position:0vw -5vw;
 }
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
