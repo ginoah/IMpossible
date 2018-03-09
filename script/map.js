@@ -41,7 +41,7 @@ function detectos(){
         $("#convene1").css("top","9.7vw").css("left","29.5vw");
         $("#convene2").css("left","15vw");
         $("#convene3").css("width","13.5vw");
-        $("#convene4").css("top","22.8vw").css("left","51vw");
+        $("#convene4").css("top","23vw").css("left","51.5vw");
         $("#activity-back").css("top","49vw").css("width","18.3vw");
         $("#activity").css("top","54vw").css("width","18.3vw");
         $("#finance").css("width","9vw").css("top","59vw").css("left","20vw");
