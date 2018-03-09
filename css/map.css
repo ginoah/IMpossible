@@ -400,6 +400,10 @@ body{
 
 #btn-home{
     display: none;
+    animation: float-white 6s -0s ease-in-out infinite;
+}
+
+#btn-home:hover{
     animation: float 6s -0s ease-in-out infinite;
 }
 
@@ -408,20 +412,32 @@ body{
     left:10vw;
     animation: float 6s -1s ease-in-out infinite;
 }
+#btn-information-1:hover{
+    animation: float-white 6s -0s ease-in-out infinite;
+}
 
 #btn-information-2{
     display:none;
-    animation: float 6s -1s ease-in-out infinite;
+    animation: float-white 6s -1s ease-in-out infinite;
+}
+#btn-information-2:hover{
+    animation: float 6s -0s ease-in-out infinite;
 }
 
 #btn-information-3{
     display:none;
-    animation: float 6s -1s ease-in-out infinite;
+    animation: float-white 6s -1s ease-in-out infinite;
+}
+#btn-information-3:hover{
+    animation: float 6s -0s ease-in-out infinite;
 }
 
 #btn-information-4{
     display:none;
-    animation: float 6s -1s ease-in-out infinite;
+    animation: float-white 6s -1s ease-in-out infinite;
+}
+#btn-information-4:hover{
+    animation: float 6s -0s ease-in-out infinite;
 }
 
 #btn-photos{
@@ -429,18 +445,30 @@ body{
     left:75vw;
     animation: float 6s -2s ease-in-out infinite;
 }
+#btn-photos:hover{
+    animation: float-white 6s -0s ease-in-out infinite;
+}
 
 #btn-register-1{
     animation: float 6s -3s ease-in-out infinite;
 }
+#btn-register-1:hover{
+    animation: float-white 6s -0s ease-in-out infinite;
+}
 
 #btn-register-2{
     display: none;
-    animation: float 6s -3s ease-in-out infinite;
+    animation: float-white 6s -3s ease-in-out infinite;
+}
+#btn-register-2:hover{
+    animation: float 6s -0s ease-in-out infinite;
 }
 
 #btn-about{
     animation: float 6s -4s ease-in-out infinite;
+}
+#btn-about:hover{
+    animation: float-white 6s -0s ease-in-out infinite;
 }
 
 
@@ -541,7 +569,7 @@ body{
 
 @keyframes float {
     0% {
-        filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.6));
+        filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.9));
         transform: translateY(0px);
     }
     50% {
@@ -549,7 +577,22 @@ body{
         transform: translateY(-1vw);
     }
     100% {
-        filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.6));
+        filter: drop-shadow(0px 1vw 1vw rgba(0,0,0,0.9));
+        transform: translateY(0px);
+    }
+}
+
+@keyframes float-white {
+    0% {
+        filter: drop-shadow(0px 1vw 1vw rgba(255,255,255,0.9));
+        transform: translateY(0px);
+    }
+    50% {
+        filter: drop-shadow(0px 2vw 1vw rgba(255,255,255,0.2));
+        transform: translateY(-1vw);
+    }
+    100% {
+        filter: drop-shadow(0px 1vw 1vw rgba(255,255,255,0.9));
         transform: translateY(0px);
     }
 }

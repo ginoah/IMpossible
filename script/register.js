@@ -42,6 +42,7 @@ $(window).keydown(function(event){
   });
 
 $(".next").click(function(){
+  $("#register").scrollTop(0);
   var form = $("#msform");
   form.validate({
     rules: {
