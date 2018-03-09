@@ -260,7 +260,7 @@ body{
     width:20vw;
     height: 22vw;
     top:2vw;
-    left:3vw;
+    left:0vw;
     background:url(../image/list_empty.png);
     background-size: 100%;
     animation: float 6s -5s ease-in-out infinite;
