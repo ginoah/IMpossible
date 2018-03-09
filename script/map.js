@@ -18,21 +18,24 @@ $(
         move("convene2",1200);
         move("convene3",5000);
         move("convene4",3000);
-        move("activity",2000)
+        move("activity",2000);
+        move("art",3700);
+        move("editor",1900);
+        move("course",3000);
+        move("mis",3180);
+        move("accompany",5750);
     }
 )
 
 function move(id,time){
-    console.log(id,time);
     var src = $("#"+id).attr("src");
     var len = src.length;
     var filetype = src.substring(len-3,len);
     var file = src.substring(0,len-3);
-    console.log(filetype);
     if(filetype == "jpg"){
         $("#"+id).attr("src",file+"gif");
         setTimeout(function(){$("#"+id).attr("src",file+"jpg");console.log(id,file)},time);
-        setTimeout(function(){move(id,time);},(Math.random()*10+time/1000)*1000);
+        setTimeout(function(){move(id,time);},(Math.random()*20+time/1000)*1000);
     }
 };
 
