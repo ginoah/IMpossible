@@ -16,16 +16,16 @@ $(
         audio.play();
         audio.loop=true;
         audio.volume=0.1;
-        move("convene1",3500);
-        move("convene2",1200);
-        move("convene3",5000);
-        move("convene4",3000);
-        move("activity",2000);
-        move("art",3700);
-        move("editor",1900);
-        move("course",3000);
-        move("mis",3180);
-        move("accompany",5750);
+        move("convene1");
+        move("convene2");
+        move("convene3");
+        move("convene4");
+        move("activity");
+        move("art");
+        move("editor");
+        move("course");
+        move("mis");
+        move("accompany");
     }
 )
 
@@ -53,7 +53,18 @@ function detectos(){
         $("#accompany").css("top","88.8vw").css("left","43.8vw");
     }
 };
-function move(id,time){
+function move(id){
+    var time = 0;
+    if(id == "convene1") time = 3500;
+    if(id == "convene2") time = 1200;
+    if(id == "convene3") time = 5000;
+    if(id == "convene4") time = 3000;
+    if(id == "activity") time = 2000;
+    if(id == "art") time = 3700;
+    if(id == "editor") time = 1900;
+    if(id == "course") time = 3000;
+    if(id == "mis") time = 3180;
+    if(id == "accompany") time = 5750;
     var src = $("#"+id).attr("src");
     var len = src.length;
     var filetype = src.substring(len-3,len);
@@ -64,6 +75,11 @@ function move(id,time){
         setTimeout(function(){move(id,time);},(Math.random()*20+time/1000)*1000);
     }
 };
+
+$(".gif").hover(function(){
+    var id = $(this).attr("id");
+    move(id);
+});
 
 // window.onresize = function(event) {
 //     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
