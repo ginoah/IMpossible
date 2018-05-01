@@ -1,29 +1,17 @@
 
- // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC9pLlMbTPrpIriWrRrHj89aiLo0viRYmo",
-    authDomain: "ntu-im-camp-2018.firebaseapp.com",
-    databaseURL: "https://ntu-im-camp-2018.firebaseio.com",
-    projectId: "ntu-im-camp-2018",
-    storageBucket: "ntu-im-camp-2018.appspot.com",
-    messagingSenderId: "63894631558"
-  };
-  firebase.initializeApp(config);
+// Initialize Firebase
+// regist over
+//   var config = {
+//     apiKey: "",
+//     authDomain: "",
+//     databaseURL: "",
+//     projectId: "",
+//     storageBucket: "",
+//     messagingSenderId: ""
+//   };
+//   firebase.initializeApp(config);
 
-var database = firebase.database();
-
-
-// $(".submit").on("click",function(){
-//     writeUserData("31","gino","a@a.com","url");
-// });
-
-// function writeUserData(userId, name, email, imageUrl) {
-//       firebase.database().ref('users/' + userId).set({
-//         username: name,
-//         email: email,
-//         profile_picture : imageUrl
-//       });
-// }
+// var database = firebase.database();
 
 // // Custom method to validate username
 $.validator.addMethod("usernameRegex", function(value, element) {
@@ -40,7 +28,6 @@ $(window).keydown(function(event){
       return false;
     }
   });
-
 $(".next").click(function(){
   $("#register").scrollTop(0);
   var form = $("#msform");
@@ -178,10 +165,14 @@ $(".submit").click(function(){
 
 
 })
+$(".over").click(function(){
+  $("#regpopup").fadeIn();
+    return $("#regpopup").addClass('activePopup');
+});
 
 // 當點擊popup上的"OK!"按鈕，popup會關閉，並連結到首頁
 $(document).on('click', "#regpopBtn", function() {
-  location.href = "./";
+  $("#regpopup").fadeOut();
 });
 
 // 查看尺寸表
